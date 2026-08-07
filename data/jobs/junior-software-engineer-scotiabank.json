@@ -1,0 +1,64 @@
+{
+  "job_title": "Junior Software Engineer",
+  "company_name": "Scotiabank",
+  "location": "Toronto, ON",
+  "remote_status": "not listed",
+  "posting_age_days": 7,
+  "required_skills": [
+    "Java",
+    "JavaScript",
+    "Python",
+    "MySQL",
+    "PostgreSQL",
+    "MongoDB",
+    "RESTful APIs",
+    "CI/CD",
+    "Git"
+  ],
+  "preferred_skills": [
+    "GCP",
+    "Azure"
+  ],
+  "experience": {
+    "min_years": null,
+    "seniority": "junior"
+  },
+  "education": null,
+  "salary": {
+    "min_amount": null,
+    "max_amount": null,
+    "currency": null,
+    "period": null
+  },
+  "responsibilities": [
+    "Write clean, maintainable, and well documented code",
+    "Document software features",
+    "Perform reviews with team members",
+    "Participate in code reviews, unit testing, and debugging",
+    "Learn and adapt to CI/CD pipelines and cloud deployment practices",
+    "Follow guidance from senior team members and leads"
+  ],
+  "_source_file": "junior-software-engineer-scotiabank.pdf",
+  "_source_hash": "859ea60de0a5",
+  "company_research": {
+    "company_size": "Large, with over 88,000 employees globally.",
+    "industry": "Banking and Financial Services.",
+    "recent_news": [
+      "Implemented a major restructuring plan in late 2025 involving the layoff of approximately 3,000 employees (3% of its global workforce) to reduce costs and prioritize digital transformation.",
+      "Expanding its U.S. presence with a new hub in Dallas and office relocation in New York.",
+      "Focusing on automating processes and shifting resources toward mobile and digital banking platforms."
+    ],
+    "culture_signals": [
+      "Employees generally report a supportive, inclusive culture with good work-life balance.",
+      "The engineering interview process is described as practical, focusing on architecture and system design rather than algorithm puzzles.",
+      "Some internal reviews suggest concerns regarding career advancement and, more recently, anxiety surrounding job security due to ongoing restructuring.",
+      "There are occasional complaints about management practices and hiring biases in specific teams."
+    ],
+    "notes_for_applicant": [
+      "Prepare for technical interviews by focusing on system design, API behavior, and trade-offs in regulated environments rather than just LeetCode-style puzzles.",
+      "The median total compensation for Software Engineers is around CA$90k, with high-end roles reaching over CA$160k.",
+      "Be aware that the company is currently in a phase of significant workforce rationalization; ensure you have a clear understanding of the specific team's stability and growth trajectory."
+    ],
+    "research_succeeded": true
+  }
+}

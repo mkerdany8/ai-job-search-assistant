@@ -1,0 +1,77 @@
+{
+  "job_title": "Jr. C++ Software Developer",
+  "company_name": "Align Technology",
+  "location": "Toronto, ON",
+  "remote_status": "on-site",
+  "posting_age_days": 21,
+  "required_skills": [
+    "C++",
+    "git",
+    "Visual Studio",
+    "VSCode",
+    "Claude Code",
+    "CoPilot",
+    "Codex"
+  ],
+  "preferred_skills": [
+    "non-linear mathematical optimization",
+    "Linux",
+    "docker",
+    "WSL2",
+    "C#",
+    "Python",
+    "Go",
+    "AWS",
+    "Lambda",
+    "EC2",
+    "IAM",
+    "S3",
+    "Splunk",
+    "Terraform",
+    "Terragrunt",
+    "Bamboo",
+    "GitHub Actions"
+  ],
+  "experience": {
+    "min_years": 2,
+    "seniority": "junior"
+  },
+  "education": "Bachelor’s degree or higher in software engineering, computer science, or mathematics",
+  "salary": {
+    "min_amount": 92900.0,
+    "max_amount": 127700.0,
+    "currency": "CAD",
+    "period": "yearly"
+  },
+  "responsibilities": [
+    "Write C++ software components, contribute to full test coverage and technical documentation",
+    "Participate in research and development of 3D measurements and geometrical algorithms to solve engineering and clinical problems",
+    "Work in an agile team of developers and SQA engineers, and collaborate with other development teams",
+    "Actively learn the complex problem domain and technologies that enable the software ecosystem",
+    "Investigate and implement bug fixes, and identify opportunities for reliability and performance improvements",
+    "Productively use LLM development assistants"
+  ],
+  "_source_file": "jr-cpp-developer-align.pdf",
+  "_source_hash": "c5b74f6b12fe",
+  "company_research": {
+    "company_size": "20,000+ employees",
+    "industry": "Medical Equipment Manufacturing",
+    "recent_news": [
+      "Navigated a challenging fiscal 2025 with management citing the need for 'difficult organizational decisions' to position the company for the future.",
+      "Acquired the Vienna-based 3D printing technology company Cubicure GmbH in September 2023.",
+      "Opened a customer education and training center in Toronto, Canada."
+    ],
+    "culture_signals": [
+      "General employee sentiment on sites like Glassdoor is mixed, with an average rating around 3.4/5.",
+      "Some employees report a flexible, hybrid, and 'laid back' work environment.",
+      "Engineers have noted that management encourages exploration of new technologies."
+    ],
+    "notes_for_applicant": [
+      "Align Technology is a global leader in digital orthodontics (Invisalign, iTero scanners, exocad software).",
+      "While the company has a physical presence in Canada (specifically a training center in Toronto), most core software development engineering roles appear to be based at their major international hubs rather than explicitly in Canada.",
+      "Verify the specific location for this Jr. C++ role, as Align's R&D and engineering teams are primarily located in the US (Tempe, San Jose), Poland, Israel, and Switzerland.",
+      "The role involves complex C++ development, likely related to their 3D imaging, CAD/CAM, or scanning software suites."
+    ],
+    "research_succeeded": true
+  }
+}

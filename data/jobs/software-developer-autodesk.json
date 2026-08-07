@@ -1,0 +1,77 @@
+{
+  "job_title": "Software Developer",
+  "company_name": "Autodesk",
+  "location": "Toronto, ON",
+  "remote_status": "hybrid",
+  "posting_age_days": 5,
+  "required_skills": [
+    "Java",
+    "Python",
+    "Go",
+    "Git",
+    "RESTful service patterns",
+    "event-driven service patterns"
+  ],
+  "preferred_skills": [
+    "AWS",
+    "Lambda",
+    "Fargate",
+    "SQS",
+    "DynamoDB",
+    "Aurora",
+    "microservices",
+    "streaming",
+    "real-time processing",
+    "Docker",
+    "CI/CD",
+    "observability",
+    "metrics",
+    "logging"
+  ],
+  "experience": {
+    "min_years": null,
+    "seniority": "junior"
+  },
+  "education": "Bachelor’s degree in Computer Science, Engineering, or related field (or equivalent training/experience)",
+  "salary": {
+    "min_amount": 72000.0,
+    "max_amount": 105600.0,
+    "currency": "CAD",
+    "period": "yearly"
+  },
+  "responsibilities": [
+    "Implement features and fixes in backend services under mentorship",
+    "Write secure, reliable, and maintainable code with unit tests and clear documentation",
+    "Learn to build and optimize microservices and event-driven components",
+    "Participate in code reviews",
+    "Follow Agile practices",
+    "Troubleshoot and resolve routine code issues",
+    "Assist with production deployments, basic operational tasks, and monitoring",
+    "Use Agentic AI-assisted programming tools",
+    "Contribute to team knowledge via documentation, tests, and incremental improvements"
+  ],
+  "_source_file": "software-developer-autodesk.pdf",
+  "_source_hash": "87df98e614d6",
+  "company_research": {
+    "company_size": "Over 10,000 employees globally.",
+    "industry": "Software corporation focusing on architecture, engineering, construction, manufacturing, and media/entertainment industries.",
+    "recent_news": [
+      "In January 2026, Autodesk announced a workforce reduction of approximately 7% (about 1,000 employees) as part of a restructuring plan focusing on AI and cloud initiatives.",
+      "The company also conducted a 9% workforce reduction in February 2025.",
+      "Autodesk recently expanded its Canadian presence by opening a new office in Vancouver in January 2026."
+    ],
+    "culture_signals": [
+      "General employee sentiment is positive, with an average rating of 4.0/5 stars on review platforms.",
+      "The workplace is frequently described as warm, inclusive, and collaborative.",
+      "Autodesk emphasizes a 'One ORBIT' framework for global collaboration across teams and time zones.",
+      "Engineering teams are encouraged to share and reuse common code to improve efficiency and security."
+    ],
+    "notes_for_applicant": [
+      "Autodesk has significant Canadian operations in Toronto (AI/Cloud focus), Montreal (Media & Entertainment expertise), and Vancouver.",
+      "The company is aggressively shifting toward AI-driven software features and a subscription-based business model.",
+      "While reviews are generally positive, prospective candidates should be aware of the recent, multi-year trend of restructuring-related layoffs.",
+      "The engineering organization is highly distributed, relying on digital tools like Slack for global coordination."
+    ],
+    "research_succeeded": true
+  }
+}

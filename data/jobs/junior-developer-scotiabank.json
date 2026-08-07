@@ -1,0 +1,61 @@
+{
+  "job_title": "Junior Developer",
+  "company_name": "Scotiabank",
+  "location": "Toronto, ON",
+  "remote_status": "on-site",
+  "posting_age_days": 7,
+  "required_skills": [
+    "ReactJS",
+    "NodeJS",
+    "Spring Boot",
+    "Git",
+    "GCP",
+    "Azure"
+  ],
+  "preferred_skills": [],
+  "experience": {
+    "min_years": null,
+    "seniority": "junior"
+  },
+  "education": null,
+  "salary": {
+    "min_amount": null,
+    "max_amount": null,
+    "currency": null,
+    "period": null
+  },
+  "responsibilities": [
+    "Build scalable and maintainable MFEs in ReactJS and BFFs in NodeJS",
+    "Build backend APIs using Spring Boot stack",
+    "Write clean, maintainable, and well documented code",
+    "Help document software features and perform reviews with team members",
+    "Participate in code reviews, unit testing, and debugging",
+    "Implement and maintain CI/CD pipelines",
+    "Contribute to design decisions and propose improvements",
+    "Deploy and monitor apps and services in GCP and Azure environments"
+  ],
+  "_source_file": "junior-developer-scotiabank.pdf",
+  "_source_hash": "23de413cd8e6",
+  "company_research": {
+    "company_size": "88,000+ employees",
+    "industry": "Banking and Financial Services",
+    "recent_news": [
+      "Engaged in restructuring its Latin American operations, including a merger agreement announced in early 2025.",
+      "Reported C$1.5 trillion in assets as of fiscal 2025.",
+      "Experienced a significant customer-facing technical outage in November 2024."
+    ],
+    "culture_signals": [
+      "Generally positive feedback regarding workplace culture, often described as friendly and collaborative.",
+      "Strong emphasis on diversity and inclusion.",
+      "Offers structured performance reviews and 360-degree feedback for employees.",
+      "Some employee reviews note concerns regarding management organization and below-market salary packages."
+    ],
+    "notes_for_applicant": [
+      "As one of Canada's 'Big Five' banks, it is a stable, large-scale employer.",
+      "Technology teams are encouraged to have backgrounds in areas like computer science, cybersecurity, and data science.",
+      "While some employees appreciate the opportunity to start a career in software engineering here, others have pointed out potential limitations in advancement opportunities depending on the specific team.",
+      "Headquartered in Toronto, Ontario, with significant international operations."
+    ],
+    "research_succeeded": true
+  }
+}

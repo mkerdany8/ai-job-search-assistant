@@ -1,0 +1,64 @@
+{
+  "job_title": "Software Developer",
+  "company_name": "RBC",
+  "location": "Toronto, ON",
+  "remote_status": "not listed",
+  "posting_age_days": 10,
+  "required_skills": [
+    "Python",
+    "Golang",
+    "Java",
+    "REST APIs",
+    "Git",
+    "AWS",
+    "Azure",
+    "Docker",
+    "Kubernetes"
+  ],
+  "preferred_skills": [],
+  "experience": {
+    "min_years": 0,
+    "seniority": "junior"
+  },
+  "education": null,
+  "salary": {
+    "min_amount": null,
+    "max_amount": null,
+    "currency": null,
+    "period": null
+  },
+  "responsibilities": [
+    "Contributing to the development, testing, and maintenance of AI services",
+    "Building reliable APIs, backend services, and integration components",
+    "Learning and applying software engineering best practices",
+    "Participating in code reviews, design discussions, and team ceremonies",
+    "Collaborating with infrastructure, platform, and ML teams",
+    "Writing unit tests, integration tests, and documentation",
+    "Troubleshooting defects and supporting production issues",
+    "Growing practical experience with modern engineering tools, cloud platforms, containerization, and AI service development"
+  ],
+  "_source_file": "software-developer-rbc.pdf",
+  "_source_hash": "6afdf07b5f69",
+  "company_research": {
+    "company_size": "Over 100,000 employees worldwide",
+    "industry": "Financial Services (one of Canada's 'Big Five' banks)",
+    "recent_news": [
+      "Continued focus on AI integration, including the creation of a dedicated AI group and leveraging generative AI to enhance developer productivity.",
+      "Committed to facilitating $500 billion in sustainable finance by 2025.",
+      "Active in digital transformation and open-source supply-chain resiliency initiatives through industry alliances."
+    ],
+    "culture_signals": [
+      "Collaborative and supportive team environment with a strong 'One RBC' culture.",
+      "Structured development opportunities, including mentorship, internal mobility, and rotational programs.",
+      "Can experience friction due to large-scale, governance-heavy corporate processes and periodic workload peaks.",
+      "Shift toward AI-driven engineering, focusing on quality of judgment over raw code volume."
+    ],
+    "notes_for_applicant": [
+      "Software developers report mixed experiences, with ratings averaging around 3.8/5 on major review platforms.",
+      "The role likely involves navigating a large, complex organizational structure where approval processes are standard.",
+      "Candidates should emphasize their adaptability, ability to work cross-functionally, and comfort with large-scale digital initiatives.",
+      "Corporate headquarters are located in Toronto, Ontario."
+    ],
+    "research_succeeded": true
+  }
+}

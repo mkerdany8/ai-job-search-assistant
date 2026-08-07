@@ -1,0 +1,71 @@
+{
+  "job_title": "Software Developer (New or Recent Graduate)",
+  "company_name": "BMO",
+  "location": "Toronto, ON",
+  "remote_status": "not listed",
+  "posting_age_days": 7,
+  "required_skills": [
+    "Quality Assurance and Testing",
+    "Cloud computing",
+    "Programming",
+    "Applications Integration",
+    "Test Driven Development",
+    "System Development Lifecycle",
+    "Troubleshooting",
+    "System and Technology Integration"
+  ],
+  "preferred_skills": [
+    "Microservices",
+    "Technology Business Requirements Definition",
+    "Analysis and Mapping"
+  ],
+  "experience": {
+    "min_years": 4,
+    "seniority": "junior"
+  },
+  "education": "post-secondary degree in related field of study or an equivalent combination of education and experience",
+  "salary": {
+    "min_amount": 61600.0,
+    "max_amount": 113900.0,
+    "currency": "CAD",
+    "period": "yearly"
+  },
+  "responsibilities": [
+    "Drives the overall software development lifecycle",
+    "Transform requirements into features",
+    "Managing development teams and processes",
+    "Conducting software testing and maintenance",
+    "Translating user requirements into technical specifications",
+    "Writing code",
+    "Managing the preparation of design specifications",
+    "Supports system design",
+    "Provides advice on security requirements",
+    "Debugs business systems and service applications",
+    "Analyzes, develops, tests, and implements new software programs",
+    "Performs preventative and corrective maintenance, troubleshooting and fault rectification",
+    "Follows release management processes and standards"
+  ],
+  "_source_file": "software-developer-bmo.pdf",
+  "_source_hash": "a78bda84aa3b",
+  "company_research": {
+    "company_size": "BMO Financial Group is a major North American financial institution and the 7th largest bank in North America by assets, with over $1.4 trillion in assets and 13 million customers.",
+    "industry": "Financial Services and Banking",
+    "recent_news": [
+      "Completed a strategic U.S. 'reset' by shedding low-yield loans and high-cost deposits to improve return on assets.",
+      "Reported strong growth in fiscal 2025 financial results, with significant net income growth in Capital Markets and Canadian personal and commercial banking.",
+      "Resuming loan growth strategy following a focus on portfolio optimization throughout 2025."
+    ],
+    "culture_signals": [
+      "Employees generally rate the company around 3.8 to 4.0 out of 5 stars on major review platforms.",
+      "Positive feedback often highlights a supportive, collaborative environment and a strong culture of continuous learning.",
+      "Some employees report mixed experiences, occasionally citing disorganized management or intense, busy project workloads."
+    ],
+    "notes_for_applicant": [
+      "BMO maintains a specific 'Students' career portal and actively recruits interns and recent graduates for roles in emerging technology.",
+      "As a large Canadian bank, BMO typically offers structured onboarding and professional development programs suitable for early-career developers.",
+      "Candidates may want to clarify team-specific remote work (WFH) policies, as these can vary significantly within large financial institutions.",
+      "Consider highlighting your interest in 'growing the good in business' as this is a core aspect of BMO's stated corporate purpose."
+    ],
+    "research_succeeded": true
+  }
+}

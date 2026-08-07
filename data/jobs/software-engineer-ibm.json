@@ -1,0 +1,58 @@
+{
+  "job_title": "Software Engineer",
+  "company_name": "IBM",
+  "location": "Toronto, ON",
+  "remote_status": "remote",
+  "posting_age_days": 7,
+  "required_skills": [
+    "Java",
+    "Kubernetes",
+    "cloud platforms"
+  ],
+  "preferred_skills": [
+    "AWS",
+    "GCP",
+    "Azure"
+  ],
+  "experience": {
+    "min_years": 1,
+    "seniority": "not stated"
+  },
+  "education": "BS Degree in Computer Science, Engineering, or equivalent experience",
+  "salary": {
+    "min_amount": 113200.0,
+    "max_amount": 130200.0,
+    "currency": "CAD",
+    "period": "yearly"
+  },
+  "responsibilities": [
+    "Work with distributed systems, cloud-native development, and secure, scalable data integration",
+    "Architect a complex engineering system from end to end",
+    "Partner across engineering and other key stakeholders to create and execute the overall roadmap for delivering a top-notch Data Streaming Platform",
+    "Evaluate and enhance the efficiency of our platform's technology stack",
+    "Solve complicated technical projects with high quality and provide technical guidance to the team"
+  ],
+  "_source_file": "software-engineer-ibm.pdf",
+  "_source_hash": "0a25bc140403",
+  "company_research": {
+    "company_size": "10,001+ employees (Global workforce of over 270,000)",
+    "industry": "Information Technology, Consulting, Software, and Infrastructure",
+    "recent_news": [
+      "Confirmed a global round of layoffs in Q4 2025 impacting a 'low single-digit percentage' of the workforce.",
+      "Strategic shift focusing heavily on AI, hybrid-cloud, and automation services.",
+      "IBM continues to be a major player in the enterprise software and consulting space, with strong Q3 2025 earnings growth in their software and infrastructure segments."
+    ],
+    "culture_signals": [
+      "Employee reviews for IBM Canada generally reflect moderate satisfaction with work-life balance and diversity.",
+      "Glassdoor ratings for IBM Canada are generally positive (approx 3.4-3.8/5 depending on location), though some employees note challenges regarding the restructuring environment.",
+      "The company emphasizes a culture of 'creating' and innovation, but employees have expressed concerns during recent cycles of workforce rebalancing."
+    ],
+    "notes_for_applicant": [
+      "IBM maintains a significant presence in Canada with headquarters in Markham, Ontario, and offices in cities like Toronto, Ottawa, and Montreal.",
+      "Candidates should be prepared for a company currently in a state of 'workforce rebalancing' as they transition toward higher-margin AI and consulting work.",
+      "The interview process for engineering roles likely focuses on technical alignment with their cloud, AI, and enterprise software stacks.",
+      "Researching the specific division you are applying to (e.g., Consulting vs. Software vs. Infrastructure) is recommended as the experience can vary by department."
+    ],
+    "research_succeeded": true
+  }
+}

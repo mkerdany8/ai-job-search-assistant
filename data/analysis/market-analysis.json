@@ -1,0 +1,90 @@
+{
+  "postings_analyzed": 8,
+  "roles_covered": [
+    "Jr. C++ Software Developer",
+    "Junior Developer",
+    "Junior Software Engineer",
+    "Software Developer",
+    "Software Developer (New or Recent Graduate)",
+    "Software Engineer"
+  ],
+  "top_required_skills": [
+    {
+      "skill": "Git",
+      "posting_count": 5,
+      "notes": "Version control is the most cited requirement."
+    },
+    {
+      "skill": "Java",
+      "posting_count": 4,
+      "notes": "Foundational language across enterprise and banking sectors."
+    },
+    {
+      "skill": "Python",
+      "posting_count": 3,
+      "notes": "Highly favored for data, AI, and backend scripting."
+    },
+    {
+      "skill": "REST APIs",
+      "posting_count": 2,
+      "notes": "Aggregated from 'RESTful APIs', 'RESTful service patterns', and 'REST APIs'."
+    },
+    {
+      "skill": "Azure/GCP",
+      "posting_count": 2,
+      "notes": "Multi-cloud competency is required in banking-related roles."
+    },
+    {
+      "skill": "Kubernetes",
+      "posting_count": 2,
+      "notes": "Usually paired with CI/CD and containerization expertise."
+    }
+  ],
+  "top_preferred_skills": [
+    {
+      "skill": "AWS",
+      "posting_count": 3,
+      "notes": "Most requested cloud provider for nice-to-have status."
+    },
+    {
+      "skill": "Microservices",
+      "posting_count": 2,
+      "notes": "Often grouped with event-driven or streaming architectural patterns."
+    },
+    {
+      "skill": "Docker",
+      "posting_count": 2,
+      "notes": "Frequently listed as a preferred skill alongside orchestration."
+    },
+    {
+      "skill": "Azure/GCP",
+      "posting_count": 2,
+      "notes": "Often listed as preferred in enterprise environments that use multi-cloud strategies."
+    },
+    {
+      "skill": "Lambda",
+      "posting_count": 2,
+      "notes": "Often paired with AWS-centric cloud infrastructure roles."
+    }
+  ],
+  "experience_pattern": "Strongly junior-oriented; requirements range from 0 to 4 years, with many roles open to new graduates or those with very limited professional experience.",
+  "education_pattern": "Bachelor’s degree in Computer Science, Engineering, or a related field is consistently requested, though 'equivalent experience' is often accepted.",
+  "salary_observations": "5 out of 8 postings listed salary data. Salaries range from CA$61,600 (base entry) to CA$130,200 (upper bound for specialized engineering roles).",
+  "common_responsibilities": [
+    "Writing clean, maintainable, and well-documented code",
+    "Participating in code reviews and team ceremonies",
+    "Debugging and troubleshooting production issues",
+    "Collaborating with cross-functional teams in an Agile environment",
+    "Utilizing CI/CD pipelines for deployment"
+  ],
+  "company_and_culture_patterns": [
+    "Most firms (Scotiabank, BMO, IBM, Autodesk) are undergoing significant restructuring or AI-focused pivots",
+    "Large organizations prioritize collaborative and inclusive cultures but warn of slow bureaucratic processes",
+    "Engineering environments are highly distributed and often use hybrid or remote work models"
+  ],
+  "trends": [
+    "AI is a primary driver of hiring, with roles specifically mentioning AI service development and LLM-assisted programming",
+    "Cloud-native skill sets (Docker, Kubernetes, AWS/Azure/GCP) are increasingly critical for junior roles in finance and tech",
+    "Job seekers should be prepared for questions on system design and API architecture rather than just algorithmic puzzles, even at the junior level"
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "job_title": "Software Developer, Experience@Siemens",
+  "company_name": "Siemens",
+  "location": "Vaughan, ON",
+  "remote_status": "hybrid",
+  "posting_age_days": 14,
+  "required_skills": [
+    "C#",
+    "ASP.NET",
+    "MS SQL"
+  ],
+  "preferred_skills": [
+    "instrumentation",
+    "manufacturing systems"
+  ],
+  "experience": {
+    "min_years": 0,
+    "seniority": "junior"
+  },
+  "education": "Degree in Computer Science, Electronics/ Electrical Engineering or related Engineering fields",
+  "salary": {
+    "min_amount": 35.0,
+    "max_amount": 40.0,
+    "currency": "CAD",
+    "period": "hourly"
+  },
+  "responsibilities": [
+    "Develop software in C# or ASP.NET",
+    "Fix bugs in C# or ASP.NET",
+    "Validate software functionality",
+    "Assist in the development of test and automation solutions",
+    "Support production and software validation",
+    "Collaborate with an experienced engineering team",
+    "Test/validation development designs",
+    "Implement software and hardware solutions",
+    "Assist in developing and updating work instructions",
+    "Contribute to process optimization"
+  ],
+  "_source_file": "software-developer-siemens.pdf",
+  "_source_hash": "e1f3929725ce",
+  "company_research": {
+    "company_size": "Large global organization with approximately 4,500 employees in Canada and a global workforce of tens of thousands",
+    "industry": "Industrial technology, engineering, electrification, automation, and digitalization",
+    "recent_news": [
+      "Continued focus on sustainability initiatives, including targeting carbon-neutral operations by 2030",
+      "Active investment in Canadian operations with 38 total sites, including three manufacturing facilities in Ontario and Quebec"
+    ],
+    "culture_signals": [
+      "Generally positive employee reception with a 3.8 to 3.9 out of 5-star rating on Glassdoor in Canada",
+      "Strong emphasis on diversity, inclusion, and corporate social responsibility (CSR) programs",
+      "Culture is described as promoting work-life balance and providing stability, though experiences can vary significantly by team and location"
+    ],
+    "notes_for_applicant": [
+      "Siemens is a massive, decentralized organization; verify specifically if the 'Experience@Siemens' role is under the Canadian division, as some job postings are globally listed",
+      "The company highly values professional development and offers structured talent programs",
+      "Be prepared for a corporate environment that balances legacy engineering stability with ongoing digital transformation efforts"
+    ],
+    "research_succeeded": true
+  }
+}
