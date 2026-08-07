@@ -1,0 +1,37 @@
+{
+  "strengths": [
+    "Git: 5 postings list this as a foundational requirement.",
+    "Java: 4 postings identify this as a primary language for enterprise development.",
+    "Python: 3 postings prioritize this for AI and scripting workflows.",
+    "REST APIs: 2 postings emphasize this for backend integration tasks."
+  ],
+  "gaps": [
+    {
+      "skill_or_requirement": "Docker/Containerization",
+      "market_evidence": "2 postings list as preferred, often alongside orchestration.",
+      "current_state": "The resume shows proficiency in Linux/Bash, but lacks containerization projects.",
+      "level": "short-term",
+      "action": "Complete the 'Docker for Beginners' course on KodeKloud; roughly 10-12 hours."
+    },
+    {
+      "skill_or_requirement": "AWS/Cloud Infrastructure",
+      "market_evidence": "3 postings list AWS as preferred; 2 mention Azure/GCP.",
+      "current_state": "Certified in Azure AI, but lack hands-on experience with AWS services like Lambda or EC2.",
+      "level": "short-term",
+      "action": "Complete the 'AWS Cloud Practitioner Essentials' learning plan via AWS Training and Certification; roughly 15 hours."
+    },
+    {
+      "skill_or_requirement": "CI/CD Pipelines",
+      "market_evidence": "Cited as a core responsibility in multiple junior roles.",
+      "current_state": "No mention of deployment pipelines or automation on the resume.",
+      "level": "medium-term",
+      "action": "Build a small project that uses GitHub Actions to automatically test and deploy code to a free-tier Cloud provider; 20-30 hours."
+    }
+  ],
+  "unique_value": [
+    "Combined AI certification (Azure) with practical command-line tool development using LLM APIs.",
+    "Work experience in a high-pressure customer-facing environment provides distinct 'soft skill' maturity (time management, reliability) beyond typical student profiles.",
+    "UML modeling experience via Visual Paradigm is a rare formal documentation skill for a junior developer."
+  ],
+  "summary": "Moustafa is a motivated early-career developer with strong foundational languages and a clear interest in AI integration. By shifting focus from pure language proficiency to demonstrating cloud-native deployment skills (Docker/CI/CD), he can bridge the gap between academic projects and the requirements of the Toronto junior tech market."
+}
