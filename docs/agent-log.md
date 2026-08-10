@@ -120,3 +120,63 @@ Integration", both generic, so required-skills coverage went from 25% to 0%
 over the two named requirements that remain. That is the honest reading —
 matching the word "Programming" was never evidence of fit — but it is a real
 consequence, not a free improvement.
+
+## Iteration 4
+
+Defect I found by testing, on postings-test/fake-junior-dev-northbridge.pdf.
+
+The legitimacy agent was correct: red, six negative signals, unregistered
+contact domain, advance-fee request. Everything after it was wrong.
+
+The fit assessment scored the scam 94% "Strong match — Apply. You meet the bar
+for this role." It scored high because the posting is vague: its only stated
+requirement was "basic computer skills", so required_skills came back 95% and
+experience 100%. The vaguer the fraud, the higher it scored. That inverts the
+signal. Sections 3 to 5 then drafted a positioning angle, a cover letter
+opening addressed to the scammers, and questions to ask them about their
+mentorship practices. Section 1 said "Do NOT apply to this posting" and
+section 2 said "Apply." two lines below it.
+
+Prompt given:
+When the verdict is red: the band label and call to action must not tell me to
+apply, though the score and dimension breakdown can stay as honest measures of
+overlap; a high score must be presented as what it is, requirements trivially
+satisfiable, which is itself a fraud signal; sections 3 to 5 must be framed as
+analysis of what this kind of role involves, not materials to send; nothing
+anywhere may instruct me to contact them or submit anything. Yellow carries a
+lighter caution. Decide where the fix belongs and say why.
+
+What it produced:
+The fix is split across both layers, because the two halves of the defect are
+different kinds of problem.
+
+The renderer and fit.py hold the guarantees, because a guarantee cannot live
+in a prompt. band_for() now takes the verdict and returns the advisory
+alongside the band, so a red posting cannot receive an encouraging call to
+action however the model phrases things on a given run. why_apply is cleared
+on red, outreach fields are cleared on red, and the renderer retitles sections
+3 to 5 and adds a banner above the score. Same reasoning as the original
+decision to keep the band thresholds out of the model.
+
+The prompts hold the content, because the renderer cannot generate what should
+be said instead. Suppressing the cover letter fields would leave section 4
+empty, and the spec requires all five sections. So advice.py gained a second
+system prompt used on red verdicts that produces analysis of the role type
+rather than an application to this employer, and the scoring prompt gained
+red-verdict rules so the summary explains the high score instead of selling
+the role.
+
+What I had to fix:
+One thing I got wrong on the first pass. A legitimacy check that fails to
+complete sets verdict yellow with assessment_succeeded false. I mapped that to
+"unknown" so it would not trigger the fraud framing, which was right, but it
+then fell through to the green path and printed an unqualified "Apply." A
+check that did not run is not a clean bill of health. Unknown now takes the
+same lighter caution as yellow.
+
+Verified on a rerun: red verdict, score 98%, label "Not an application
+target", advisory do_not_engage, why_apply empty, cover letter opening and
+closing empty, questions_to_ask_them empty, company_hooks empty, zero mentions
+of the company name anywhere after section 2, and every occurrence of the word
+"apply" in the rendered page is part of an instruction not to. Green and
+unknown paths re-rendered from stored results and unchanged.

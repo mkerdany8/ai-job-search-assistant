@@ -42,6 +42,41 @@ BANDS = (
      "what to build next. A long shot costs one application."),
 )
 
+# The encouraging call to action above is right for a real employer and wrong
+# for a fraudulent one, so the legitimacy verdict overrides it here rather
+# than in a prompt. The score and the dimension breakdown are honest measures
+# of overlap with the stated requirements and stay exactly as computed. What
+# changes is what the reader is told to do about them.
+RED_LABEL = "Not an application target"
+
+RED_MESSAGE = (
+    "The legitimacy check on this posting came back red. This score measures "
+    "overlap with the requirements as stated and nothing more. Do not apply, "
+    "and do not send documents or personal details to this employer."
+)
+
+# Fraudulent postings keep their requirements vague so that nearly everyone
+# qualifies. That inflates this score, which means a high number here is
+# evidence for the fraud rather than a reason to engage. Saying so is the
+# whole point: an unexplained 94% next to a red verdict reads as a conflict
+# between two systems, and the reader may believe the wrong one.
+RED_HIGH_SCORE_MESSAGE = (
+    "The legitimacy check on this posting came back red, and this score is "
+    "high because the posting asks for almost nothing. Vague, trivially "
+    "satisfiable requirements are how fraudulent postings maximise the number "
+    "of people who respond, so read this score as another fraud signal rather "
+    "than as a reason to apply. Do not send documents or personal details to "
+    "this employer."
+)
+
+# High enough that the score reads as an endorsement if left unexplained.
+RED_HIGH_SCORE_THRESHOLD = 50
+
+YELLOW_SUFFIX = (
+    " The legitimacy check did not fully verify this employer, so confirm the "
+    "posting on their own careers page before sending anything."
+)
+
 
 class SkillOverlap(BaseModel):
     """Exact, computed overlap between the resume and the posting."""
@@ -86,9 +121,14 @@ class FitAssessment(BaseModel):
     """The finished assessment: model judgement plus locally computed scoring."""
 
     overall_score: int
-    band: Literal["strong", "good", "stretch", "growth"]
+    band: Literal["strong", "good", "stretch", "growth"] = Field(
+        description="Requirement-overlap band. Independent of legitimacy: it says nothing about whether to apply."
+    )
     band_label: str
     band_message: str
+    advisory: Literal["apply", "verify_first", "do_not_engage"] = Field(
+        description="What to do about this posting, derived from the legitimacy verdict rather than the score"
+    )
     dimensions: list[DimensionScore]
     skill_overlap: SkillOverlap
     summary: str
@@ -134,11 +174,31 @@ a slot.
 
 Every score needs evidence naming specific resume and posting content.
 
-On tone. This scoring exists to help someone decide where to spend their
-applications, not to talk them out of applying. Job postings list wishes, not
+You are also given legitimacy_verdict, the result of a separate check on
+whether this posting is a real job at a real company.
+
+When legitimacy_verdict is "red", the posting is fraudulent or shows serious
+warning signs. Score the requirement overlap exactly as honestly as you would
+otherwise, because it is a real measurement, but change what you write around
+it:
+- why_apply must be an empty list. There is no reason to apply to a fraud.
+- The summary must not encourage applying, must not describe the role as an
+  opportunity, and must not address the employer as a real prospective one.
+- If the score is high, say why in the summary: these postings state vague,
+  trivially satisfiable requirements precisely so that everyone appears
+  qualified, so a high overlap score on a red posting is a further sign of
+  fraud rather than a sign of fit.
+- Never suggest contacting them, applying, or sending anything.
+
+When the verdict is "yellow", write normally but do not oversell the
+employer, and treat the company as unverified.
+
+On tone for green and yellow postings. This scoring exists to help someone
+decide where to spend their applications, not to talk them out of applying. Job postings list wishes, not
 gates, and candidates who meet most of a posting still get hired. So:
-- Never advise against applying. That is not your call, and the final
-  recommendation is generated elsewhere.
+- Never advise against applying on the basis of a weak fit. That is not your
+  call, and the final recommendation is generated elsewhere. This is about
+  fit only, and does not override the red-verdict rules above.
 - Do not pad the scores either. An honest low score with a clear explanation
   of what is missing is useful. A dishonest high one is not.
 - State shortfalls plainly in honest_stretches, as facts about the gap rather
@@ -408,12 +468,30 @@ def compute_overlap(posting: JobPosting, resume: dict) -> SkillOverlap:
     return overlap
 
 
-def band_for(score: int) -> tuple:
-    """Map a score to its band. Fixed table, no model involvement."""
-    for threshold, band, label, message in BANDS:
+def band_for(score: int, verdict: str = "green") -> tuple:
+    """Map a score and a legitimacy verdict to (band, label, message, advisory).
+
+    Fixed table, no model involvement. The band always reflects requirement
+    overlap honestly; the verdict decides what the reader is told to do with
+    it. Keeping this in Python rather than in a prompt means a red posting can
+    never be handed an encouraging call to action, however the model phrases
+    things on a given run.
+    """
+    band, label, message = BANDS[-1][1:]
+    for threshold, b, lab, msg in BANDS:
         if score >= threshold:
-            return band, label, message
-    return BANDS[-1][1:]
+            band, label, message = b, lab, msg
+            break
+
+    if verdict == "red":
+        high = score >= RED_HIGH_SCORE_THRESHOLD
+        return band, RED_LABEL, (RED_HIGH_SCORE_MESSAGE if high else RED_MESSAGE), "do_not_engage"
+    if verdict == "green":
+        return band, label, message, "apply"
+    # Yellow, or a check that could not complete. Neither is evidence against
+    # the employer, but neither confirms them either, so an unqualified
+    # "Apply." is more than we know.
+    return band, label, message + YELLOW_SUFFIX, "verify_first"
 
 
 def _combine(dimensions: list, overlap: SkillOverlap) -> int:
@@ -439,16 +517,19 @@ def _combine(dimensions: list, overlap: SkillOverlap) -> int:
     return round(score)
 
 
-def _fallback(posting: JobPosting, overlap: SkillOverlap, reason: str) -> FitAssessment:
+def _fallback(
+    posting: JobPosting, overlap: SkillOverlap, reason: str, verdict: str = "green"
+) -> FitAssessment:
     """Scoring from the computed overlap alone, when the model call fails."""
     log.debug("Falling back to computed-only scoring: %s", reason)
     score = overlap.required_coverage_pct
-    band, label, message = band_for(score)
+    band, label, message, advisory = band_for(score, verdict)
     return FitAssessment(
         overall_score=score,
         band=band,
         band_label=label,
         band_message=message,
+        advisory=advisory,
         dimensions=[
             DimensionScore(
                 dimension="required_skills",
@@ -467,9 +548,11 @@ def _fallback(posting: JobPosting, overlap: SkillOverlap, reason: str) -> FitAss
             f"Detailed scoring was unavailable ({reason}), so this is the raw "
             f"skill overlap against the {posting.job_title} posting only."
         ),
-        why_apply=[
-            f"{len(overlap.matched_required)} of the required skills are already on the resume."
-        ],
+        why_apply=(
+            []
+            if verdict == "red"
+            else [f"{len(overlap.matched_required)} of the required skills are already on the resume."]
+        ),
         transferable_strengths=[],
         honest_stretches=list(overlap.missing_required),
         scoring_succeeded=False,
@@ -482,6 +565,7 @@ def score_fit(
     market: dict,
     gaps: dict,
     research: Optional[dict] = None,
+    verdict: str = "green",
 ) -> FitAssessment:
     """Score this resume against this posting. Always returns an assessment."""
     overlap = compute_overlap(posting, resume)
@@ -493,6 +577,7 @@ def score_fit(
         "market_analysis": market,
         "gap_analysis": gaps,
         "company_research": research or "not available",
+        "legitimacy_verdict": verdict,
     }
 
     try:
@@ -508,12 +593,12 @@ def score_fit(
         )
         scoring = completion.choices[0].message.parsed
         if scoring is None:
-            return _fallback(posting, overlap, "the model returned no scoring")
+            return _fallback(posting, overlap, "the model returned no scoring", verdict)
         if completion.usage:
             log.debug("Tokens: %d prompt, %d completion",
                       completion.usage.prompt_tokens, completion.usage.completion_tokens)
     except Exception as e:
-        return _fallback(posting, overlap, str(e))
+        return _fallback(posting, overlap, str(e), verdict)
 
     # Clamp anything out of range before it reaches the arithmetic.
     dimensions = [
@@ -522,18 +607,26 @@ def score_fit(
         if d.dimension in WEIGHTS
     ]
     score = _combine(dimensions, overlap)
-    band, label, message = band_for(score)
+    band, label, message, advisory = band_for(score, verdict)
 
-    log.debug("Fit: %d%% -> %s (%s)", score, band, label)
+    # Reasons to apply have no place on a posting we are telling the reader not
+    # to apply to. Cleared here as well as forbidden in the prompt, so a model
+    # that writes them anyway cannot get them onto the page.
+    why_apply = [] if verdict == "red" else scoring.why_apply
+    if verdict == "red" and scoring.why_apply:
+        log.debug("Red verdict: dropped %d why_apply item(s)", len(scoring.why_apply))
+
+    log.debug("Fit: %d%% -> %s (%s), advisory=%s", score, band, label, advisory)
     return FitAssessment(
         overall_score=score,
         band=band,
         band_label=label,
         band_message=message,
+        advisory=advisory,
         dimensions=dimensions,
         skill_overlap=overlap,
         summary=scoring.summary,
-        why_apply=scoring.why_apply,
+        why_apply=why_apply,
         transferable_strengths=scoring.transferable_strengths,
         honest_stretches=scoring.honest_stretches,
         scoring_succeeded=True,

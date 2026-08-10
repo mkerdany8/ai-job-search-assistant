@@ -98,6 +98,55 @@ Rules:
 - The tone throughout treats this application as worth sending."""
 
 
+# Used when the legitimacy check comes back red. The spec still wants all five
+# sections, because what a role of this kind involves is worth knowing even
+# when this particular posting is fraudulent. What it does not want is a
+# packet of materials addressed to criminals, so this prompt produces analysis
+# of the role type instead of an application to this employer.
+ANALYSIS_SYSTEM_PROMPT = """You analyse a job posting that has FAILED a
+legitimacy check. It is fraudulent or shows serious warning signs. The reader
+is not going to apply to it and must not contact whoever posted it.
+
+Your job is not to help them apply. It is to salvage what is useful: what a
+genuine version of this role would involve, and how their resume stands
+against it. Write about the role type, never to or about this employer as a
+real prospective one.
+
+Hard rules. These are not stylistic preferences:
+- Never address this employer, name them as a destination for an application,
+  or write anything intended to be sent to them.
+- Never instruct the reader to apply, submit, contact, email, call, follow up,
+  or share any document or personal detail with them.
+- cover_letter_opening and cover_letter_closing must be empty strings. Do not
+  write an opening or closing line for a letter to these people.
+- questions_to_ask_them must be an empty list. There is nobody legitimate to
+  ask.
+- company_hooks must be an empty list. Do not repeat this employer's claims
+  about itself; the research about them is unverified or false.
+
+What to write instead:
+- positioning_angle: how a candidate with this resume would position
+  themselves for a genuine role of this type. One argument, about the role
+  type, not about this employer.
+- resume_summary_rewrite: a rewritten summary aimed at genuine postings of
+  this kind. Useful work either way, so make it good.
+- resume_edits and keywords_to_add: exactly as useful as they would be
+  normally, since they improve the resume for real applications. Same honesty
+  rules: only real content, reframed.
+- cover_letter_points: what a cover letter for a genuine role of this type
+  would need to argue, written as guidance about the role type. Not addressed
+  to anyone.
+- address_the_gaps: what this comparison reveals about the resume, and what
+  would close those gaps before applying to a real posting of this kind.
+- interview_questions: what a genuine interview for this kind of role would
+  test, and how this candidate would answer from their own background. Frame
+  as preparation for real interviews.
+- advice_succeeded: true if you produced this analysis.
+
+Only reference experience that appears in the resume. Never invent anything.
+Write the actual sentences, not descriptions of sentences."""
+
+
 def _empty_advice(reason: str) -> ApplicationAdvice:
     """Placeholder so the report can render with this section marked unavailable."""
     return ApplicationAdvice(
@@ -116,6 +165,31 @@ def _empty_advice(reason: str) -> ApplicationAdvice:
     )
 
 
+def _strip_outreach(advice: ApplicationAdvice) -> ApplicationAdvice:
+    """Remove anything that only makes sense as contact with the employer.
+
+    The prompt already forbids these fields on a red verdict. Clearing them
+    here too means a model that writes a cover letter anyway cannot get it
+    onto the page.
+    """
+    dropped = [
+        name for name, value in (
+            ("cover_letter_opening", advice.cover_letter_opening),
+            ("cover_letter_closing", advice.cover_letter_closing),
+            ("questions_to_ask_them", advice.questions_to_ask_them),
+            ("company_hooks", advice.company_hooks),
+        ) if value
+    ]
+    if dropped:
+        log.debug("Red verdict: cleared %s", ", ".join(dropped))
+    return advice.model_copy(update={
+        "cover_letter_opening": "",
+        "cover_letter_closing": "",
+        "questions_to_ask_them": [],
+        "company_hooks": [],
+    })
+
+
 def build_advice(
     posting: JobPosting,
     resume: dict,
@@ -123,9 +197,19 @@ def build_advice(
     market: dict,
     gaps: dict,
     research: Optional[dict] = None,
+    verdict: str = "green",
 ) -> ApplicationAdvice:
-    """Generate the advice sections. Always returns an object."""
-    log.debug("Building application advice for %s at %s", posting.job_title, posting.company_name)
+    """Generate the advice sections. Always returns an object.
+
+    A red legitimacy verdict switches to analysis of the role type instead of
+    materials addressed to this employer.
+    """
+    is_red = verdict == "red"
+    log.debug(
+        "Building %s for %s at %s",
+        "role analysis (red verdict)" if is_red else "application advice",
+        posting.job_title, posting.company_name,
+    )
 
     payload = {
         "posting": posting.model_dump(),
@@ -133,7 +217,11 @@ def build_advice(
         "fit_assessment": fit,
         "market_analysis": market,
         "gap_analysis": gaps,
-        "company_research": research or "not available",
+        # On a red verdict the research describes an entity that may not exist,
+        # or repeats the fraudster's own claims, so it is withheld entirely.
+        "company_research": "withheld: this posting failed its legitimacy check"
+        if is_red else (research or "not available"),
+        "legitimacy_verdict": verdict,
     }
 
     try:
@@ -141,7 +229,7 @@ def build_advice(
         completion = client.chat.completions.parse(
             model=REASONING_MODEL,
             messages=[
-                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "system", "content": ANALYSIS_SYSTEM_PROMPT if is_red else SYSTEM_PROMPT},
                 {"role": "user", "content": json.dumps(payload, ensure_ascii=False, default=str)},
             ],
             response_format=ApplicationAdvice,
@@ -156,6 +244,9 @@ def build_advice(
     except Exception as e:
         log.debug("Advice generation failed: %s", e)
         return _empty_advice(str(e))
+
+    if is_red:
+        advice = _strip_outreach(advice)
 
     log.debug(
         "Advice: %d resume edits, %d keywords, %d letter points, %d interview questions",

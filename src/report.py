@@ -204,11 +204,16 @@ def _section_legitimacy(verdict: dict) -> str:
     return "".join(out)
 
 
-def _section_fit(fit: dict) -> str:
-    """Section 2."""
+def _section_fit(fit: dict, verdict: str = "green") -> str:
+    """Section 2.
+
+    On a red verdict the score and the dimension breakdown stay exactly as
+    computed, because they honestly measure overlap with the stated
+    requirements. Only the colour and the call to action change.
+    """
     score = int(fit.get("overall_score", 0))
     band = fit.get("band", "growth")
-    color = BAND_COLOR.get(band, "#5b6570")
+    color = VERDICT_STYLE["red"][0] if verdict == "red" else BAND_COLOR.get(band, "#5b6570")
 
     out = [
         '<section id="fit"><h2><span class="num">2</span>Fit assessment</h2>',
@@ -222,6 +227,17 @@ def _section_fit(fit: dict) -> str:
         "</div>",
         _p(fit.get("summary", "")),
     ]
+
+    if verdict == "red":
+        # Without this the number reads as an endorsement sitting directly
+        # under a fraud warning, and the reader has to reconcile the two.
+        out.insert(1, (
+            '<div class="banner" style="border-left-color:{c};background:{b}">'
+            '<div class="verdict-label" style="color:{c}">Scored for reference only</div>'
+            '<p class="headline">This posting failed its legitimacy check. The '
+            "score below measures overlap with the requirements as written and "
+            "is not a recommendation to apply.</p></div>"
+        ).format(c=VERDICT_STYLE["red"][0], b=VERDICT_STYLE["red"][1]))
 
     overlap = fit.get("skill_overlap") or {}
     if overlap:
@@ -288,17 +304,26 @@ def _section_fit(fit: dict) -> str:
     return "".join(out)
 
 
-def _section_resume(advice: dict) -> str:
+def _section_resume(advice: dict, verdict: str = "green") -> str:
     """Section 3."""
-    out = ['<section id="resume"><h2><span class="num">3</span>Resume adaptation</h2>']
+    title = "Resume notes for this type of role" if verdict == "red" else "Resume adaptation"
+    out = [f'<section id="resume"><h2><span class="num">3</span>{title}</h2>']
 
     if not advice.get("advice_succeeded", False):
         out.append(_unavailable(advice.get("positioning_angle") or "Advice generation failed."))
         out.append("</section>")
         return "".join(out)
 
+    if verdict == "red":
+        out.append(_unavailable(
+            "This posting failed its legitimacy check, so the three sections "
+            "below analyse what a genuine role of this kind would involve. "
+            "They are not application materials, and nothing here should be "
+            "sent to this employer."
+        ))
+
     if advice.get("positioning_angle"):
-        out.append(_label("Positioning angle"))
+        out.append(_label("Positioning angle" if verdict != "red" else "How to position for this kind of role"))
         out.append(f'<div class="card">{_p(advice["positioning_angle"])}</div>')
 
     if advice.get("resume_summary_rewrite"):
@@ -328,9 +353,16 @@ def _section_resume(advice: dict) -> str:
     return "".join(out)
 
 
-def _section_cover_letter(advice: dict) -> str:
-    """Section 4."""
-    out = ['<section id="cover-letter"><h2><span class="num">4</span>Cover letter guidance</h2>']
+def _section_cover_letter(advice: dict, verdict: str = "green") -> str:
+    """Section 4.
+
+    On a red verdict the opening, closing, company hooks and any other
+    outreach content have already been cleared upstream, so this renders as
+    guidance about the role type rather than a letter.
+    """
+    red = verdict == "red"
+    title = "What a letter for this kind of role must argue" if red else "Cover letter guidance"
+    out = [f'<section id="cover-letter"><h2><span class="num">4</span>{title}</h2>']
 
     if not advice.get("advice_succeeded", False):
         out.append(_unavailable("Cover letter guidance was unavailable for this run."))
@@ -341,7 +373,7 @@ def _section_cover_letter(advice: dict) -> str:
         out.append(_label("Opening"))
         out.append(f'<div class="quote">{esc(advice["cover_letter_opening"])}</div>')
     if advice.get("cover_letter_points"):
-        out.append(_label("Body"))
+        out.append(_label("Arguments to make" if red else "Body"))
         out.append(_ul(advice["cover_letter_points"]))
     if advice.get("cover_letter_closing"):
         out.append(_label("Closing"))
@@ -350,16 +382,18 @@ def _section_cover_letter(advice: dict) -> str:
         out.append(_label("Company specifics worth referencing"))
         out.append(_ul(advice["company_hooks"]))
     if advice.get("address_the_gaps"):
-        out.append(_label("Handling the gaps honestly"))
+        out.append(_label("What the gaps mean" if red else "Handling the gaps honestly"))
         out.append(_ul(advice["address_the_gaps"]))
 
     out.append("</section>")
     return "".join(out)
 
 
-def _section_interview(advice: dict) -> str:
+def _section_interview(advice: dict, verdict: str = "green") -> str:
     """Section 5."""
-    out = ['<section id="interview"><h2><span class="num">5</span>Interview prep</h2>']
+    red = verdict == "red"
+    title = "What this kind of role tests" if red else "Interview prep"
+    out = [f'<section id="interview"><h2><span class="num">5</span>{title}</h2>']
 
     if not advice.get("advice_succeeded", False):
         out.append(_unavailable("Interview prep was unavailable for this run."))
@@ -401,6 +435,10 @@ def render_report(
     title = f"{posting.get('job_title', 'Role')} at {posting.get('company_name', 'Company')}"
     generated = generated_on or dt.date.today().isoformat()
 
+    # A failed check is not a red verdict: it means we learned nothing, so it
+    # must not trigger the fraud framing.
+    verdict = legitimacy.get("verdict", "yellow") if legitimacy.get("assessment_succeeded") else "unknown"
+
     meta = [f"<span>{esc(posting.get('location', 'Location not listed'))}</span>"]
     if posting.get("remote_status") and posting["remote_status"] != "not listed":
         meta.append(f"<span>{esc(posting['remote_status'])}</span>")
@@ -418,10 +456,10 @@ def render_report(
         f'<div class="meta">{"".join(meta)}</div>'
         "</header>"
         + _section_legitimacy(legitimacy)
-        + _section_fit(fit)
-        + _section_resume(advice)
-        + _section_cover_letter(advice)
-        + _section_interview(advice)
+        + _section_fit(fit, verdict)
+        + _section_resume(advice, verdict)
+        + _section_cover_letter(advice, verdict)
+        + _section_interview(advice, verdict)
         + '<footer>Generated by the AIP444 application advisor. Legitimacy '
           "signals and company research come from automated web and domain "
           "lookups and can be wrong or out of date; verify anything you are "

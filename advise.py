@@ -129,28 +129,31 @@ def main() -> int:
 
     # 3. Legitimacy (agentic, bounded).
     print("Checking legitimacy...")
-    verdict = assess_legitimacy(posting, raw_text, research_data)
-    if verdict.assessment_succeeded:
-        negatives = sum(1 for s in verdict.signals if s.direction == "negative")
-        print(f"  {verdict.verdict.upper()} — {len(verdict.signals)} signal(s), {negatives} negative")
+    verdict_obj = assess_legitimacy(posting, raw_text, research_data)
+    if verdict_obj.assessment_succeeded:
+        negatives = sum(1 for s in verdict_obj.signals if s.direction == "negative")
+        print(f"  {verdict_obj.verdict.upper()} — {len(verdict_obj.signals)} signal(s), {negatives} negative")
     else:
         print("  could not complete, reported as unverified")
 
-    # 4. Fit scoring.
+    # A failed check tells us nothing, so it must not be treated as a red one.
+    verdict = verdict_obj.verdict if verdict_obj.assessment_succeeded else "unknown"
+
+    # 4. Fit scoring. The verdict governs the call to action, not the score.
     print("Scoring fit...")
-    fit = score_fit(posting, resume, market, gaps, research_data)
+    fit = score_fit(posting, resume, market, gaps, research_data, verdict)
     print(f"  {fit.overall_score}% — {fit.band_label}")
 
-    # 5. Advice.
+    # 5. Advice. A red verdict switches this to role analysis.
     print("Generating advice...")
-    advice = build_advice(posting, resume, fit.model_dump(), market, gaps, research_data)
+    advice = build_advice(posting, resume, fit.model_dump(), market, gaps, research_data, verdict)
     if not advice.advice_succeeded:
         print("  advice generation failed, those sections will say so")
 
     # 6. Report.
     html_text = render_report(
         posting=posting.model_dump(),
-        legitimacy=verdict.model_dump(),
+        legitimacy=verdict_obj.model_dump(),
         fit=fit.model_dump(),
         advice=advice.model_dump(),
         source_file=pdf.name,
@@ -164,7 +167,7 @@ def main() -> int:
             "source_file": pdf.name,
             "posting": posting.model_dump(),
             "company_research": research_data,
-            "legitimacy": verdict.model_dump(),
+            "legitimacy": verdict_obj.model_dump(),
             "fit": fit.model_dump(),
             "advice": advice.model_dump(),
         },

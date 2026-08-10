@@ -1,0 +1,218 @@
+{
+  "generated_on": "2026-08-10",
+  "source_file": "fake-junior-dev-northbridge.pdf",
+  "posting": {
+    "job_title": "Junior Software Developer",
+    "company_name": "NorthBridge Digital Solutions Inc.",
+    "location": "Toronto, ON",
+    "remote_status": "remote",
+    "posting_age_days": 2,
+    "required_skills": [
+      "computer skills"
+    ],
+    "preferred_skills": [],
+    "experience": {
+      "min_years": 0,
+      "seniority": "junior"
+    },
+    "education": null,
+    "salary": {
+      "min_amount": 145000.0,
+      "max_amount": 180000.0,
+      "currency": "CAD",
+      "period": "yearly"
+    },
+    "responsibilities": [
+      "Work on software projects as assigned",
+      "Communicate with team members and clients",
+      "Support company objectives and deliverables",
+      "Other duties as required"
+    ]
+  },
+  "company_research": {
+    "company_size": "Not specified; there are multiple small, unrelated entities with similar names, generally ranging from 2-10 employees.",
+    "industry": "Digital Agency / Software Development / Consulting",
+    "recent_news": [],
+    "culture_signals": [],
+    "notes_for_applicant": [
+      "There is no single prominent company matching this exact name in Canada. Multiple small, distinct firms operate globally under variations of the name 'Northbridge' (e.g., 'NorthBridge Digital & AI Solutions', 'Northbridge Digital' based in the UK, and 'Northbridge Solutions' based in the US).",
+      "Be careful to verify the specific website and physical location of the employer you are in contact with to ensure you are dealing with a legitimate organization.",
+      "Perform due diligence on the job offer, as very small agencies (2-10 people) may have limited public information, formal HR processes, or employee reviews."
+    ],
+    "research_succeeded": true
+  },
+  "legitimacy": {
+    "verdict": "red",
+    "headline": "This posting is a highly dangerous identity theft and advance-fee scam.",
+    "signals": [
+      {
+        "signal": "Unregistered domain listed in posting",
+        "evidence": "The domain 'northbridge-digitalsolutions-careers.com' has no WHOIS registration record and does not exist.",
+        "direction": "negative",
+        "weight": "strong"
+      },
+      {
+        "signal": "Upfront request for highly sensitive personal information",
+        "evidence": "The posting asks applicants to submit their Social Insurance Number (SIN), banking details (institution, transit, account number), date of birth, and a scanned copy of their government-issued photo ID with their application.",
+        "direction": "negative",
+        "weight": "strong"
+      },
+      {
+        "signal": "Advance-fee equipment purchase requirement",
+        "evidence": "The posting states: 'Selected candidates will be required to purchase a company-approved laptop and software licence package ($1,200 CAD, reimbursed after 90 days of employment).'",
+        "direction": "negative",
+        "weight": "strong"
+      },
+      {
+        "signal": "Free email address used for corporate hiring",
+        "evidence": "Applicants are instructed to send resumes to 'northbridge.hiring2026@gmail.com' instead of a corporate domain.",
+        "direction": "negative",
+        "weight": "strong"
+      },
+      {
+        "signal": "Unrealistically high salary for no experience",
+        "evidence": "The posting offers a salary of '$145,000 – $180,000 CAD per year, plus signing bonus' for a Junior Software Developer with 'No experience necessary' and only 'Basic computer skills' required.",
+        "direction": "negative",
+        "weight": "strong"
+      },
+      {
+        "signal": "Bypassing job board application portal",
+        "evidence": "The posting explicitly states: 'Do not apply through this job board, applications sent through the portal will not be reviewed.'",
+        "direction": "negative",
+        "weight": "moderate"
+      }
+    ],
+    "domains_checked": [
+      "northbridge-digitalsolutions-careers.com"
+    ],
+    "recommendation": "Do not apply to this posting. Do not send any personal information, identification documents, banking details, or money. This is a fraudulent posting designed to steal your identity and money.",
+    "assessment_succeeded": true
+  },
+  "fit": {
+    "overall_score": 98,
+    "band": "strong",
+    "band_label": "Not an application target",
+    "band_message": "The legitimacy check on this posting came back red, and this score is high because the posting asks for almost nothing. Vague, trivially satisfiable requirements are how fraudulent postings maximise the number of people who respond, so read this score as another fraud signal rather than as a reason to apply. Do not send documents or personal details to this employer.",
+    "advisory": "do_not_engage",
+    "dimensions": [
+      {
+        "dimension": "required_skills",
+        "score": 100,
+        "evidence": "The posting lists only 'computer skills' as a requirement. The candidate's resume demonstrates extensive technical capabilities, including programming in Python, Java, and C++, which trivially satisfies this extremely vague requirement.",
+        "matched": [
+          "computer skills"
+        ],
+        "missing": []
+      },
+      {
+        "dimension": "experience",
+        "score": 100,
+        "evidence": "The posting specifies a minimum of 0 years of experience for a junior role. The candidate, currently a student with academic project experience, fully meets this low threshold.",
+        "matched": [
+          "0 years experience"
+        ],
+        "missing": []
+      },
+      {
+        "dimension": "market_alignment",
+        "score": 90,
+        "evidence": "The candidate's profile is exceptionally well-aligned with the actual Toronto junior developer market, possessing key in-demand skills like Git, Java, Python, and REST APIs, which are highly sought after by legitimate employers in this field.",
+        "matched": [
+          "Git",
+          "Java",
+          "Python",
+          "REST APIs"
+        ],
+        "missing": [
+          "Docker",
+          "AWS",
+          "CI/CD"
+        ]
+      }
+    ],
+    "skill_overlap": {
+      "matched_required": [],
+      "implied_required": [
+        "computer skills"
+      ],
+      "missing_required": [],
+      "matched_preferred": [],
+      "implied_preferred": [],
+      "missing_preferred": [],
+      "required_coverage_pct": 50,
+      "preferred_coverage_pct": 0,
+      "filtered_generic_required": [],
+      "filtered_generic_preferred": []
+    },
+    "summary": "This posting has been flagged with a red legitimacy verdict due to severe warning signs, including an unrealistically high salary ($145,000 - $180,000 CAD) for a junior role and trivially vague requirements ('computer skills'). While the candidate's technical profile matches these low requirements perfectly, this high compatibility is a common tactic used in fraudulent postings to attract a wide pool of applicants rather than an indication of a genuine career fit.",
+    "why_apply": [],
+    "transferable_strengths": [
+      "Customer service and time management skills from working as a Deli Clerk while maintaining a full course load.",
+      "Formal system design and documentation skills using UML modeling and Visual Paradigm."
+    ],
+    "honest_stretches": [
+      "The posting itself is highly suspect and does not represent a legitimate employment opportunity.",
+      "For genuine market roles, the candidate currently lacks hands-on experience with cloud infrastructure (AWS/Azure) and containerization (Docker)."
+    ],
+    "scoring_succeeded": true
+  },
+  "advice": {
+    "positioning_angle": "Position yourself as a foundational software developer who bridges rigorous academic computer science principles with practical, modern API integration and proven real-world reliability.",
+    "resume_summary_rewrite": "Detail-oriented Computer Programming student with a strong foundation in object-oriented design, systems programming, and API integration. Proven ability to build functional command-line tools and applications in Python, Java, and C++. Combines technical aptitude in Linux environments with strong time-management and collaborative skills developed through balancing academic coursework with customer-facing employment.",
+    "resume_edits": [
+      {
+        "section": "Projects - AI Git Commit Tool",
+        "current": "Built a command-line tool that generates Git commit messages by sending staged diffs to a language-model API.",
+        "suggested": "Developed a Python-based command-line interface (CLI) tool that automates Git commit message generation by parsing staged diffs and integrating with the OpenRouter API; utilized Git for version control and managed API error handling.",
+        "rationale": "Emphasizes CLI development, API integration, and version control, which are highly sought after in genuine junior developer roles."
+      },
+      {
+        "section": "Skills",
+        "current": "C, C++, Java, Python, SQL, Linux, Bash, Git, REST APIs, Visual Paradigm",
+        "suggested": "Languages: Python, Java, C++, C, SQL, Bash | Tools & Technologies: Git, REST APIs, Linux, Visual Paradigm, UML Modeling, Command-Line Tooling",
+        "rationale": "Groups skills logically and explicitly highlights UML modeling and command-line tooling, which are unique strengths identified in the gap analysis."
+      }
+    ],
+    "keywords_to_add": [
+      "object-oriented programming",
+      "data structures and algorithms",
+      "debugging",
+      "UML modeling"
+    ],
+    "cover_letter_opening": "",
+    "cover_letter_points": [
+      "Argue the strength of foundational object-oriented programming and systems design, using the TMUber Ride-Sharing Application (Java) and Media Library System (C++) to demonstrate clean code principles and inheritance.",
+      "Highlight practical experience with modern API integration and automation, referencing the AI Git Commit Tool to show how Python and REST APIs can be leveraged to improve developer workflows.",
+      "Address professional reliability and soft skills by demonstrating how balancing a customer-facing role at Adonis Supermarket with a rigorous academic schedule at Seneca Polytechnic proves strong time management, adaptability, and communication."
+    ],
+    "cover_letter_closing": "",
+    "company_hooks": [],
+    "address_the_gaps": [
+      "In interviews for genuine roles, acknowledge that while your academic projects have focused on local environments and CLI tools, you are actively learning containerization concepts and plan to containerize your AI Git Commit Tool using Docker.",
+      "Highlight your Microsoft Azure AI certification as a foundation in cloud concepts, and explain that you are currently expanding this knowledge by studying AWS Cloud Practitioner essentials to understand cloud-native deployment.",
+      "Explain that you understand the importance of automated testing and deployment from your coursework, and express an eagerness to apply these principles using GitHub Actions in a professional team environment."
+    ],
+    "interview_questions": [
+      {
+        "question": "Can you walk us through how you designed the inheritance structure in your Media Library System?",
+        "why_asked": "To test understanding of object-oriented programming principles, specifically inheritance and polymorphism in C++.",
+        "answer_strategy": "Explain the problem (managing different media types), describe the base class (MediaItem) and how Books, Movies, and TV Shows inherit from it, and discuss how this design prevents code duplication.",
+        "from_your_background": "Media Library System project (C++)."
+      },
+      {
+        "question": "How do you handle API rate limits or connectivity issues when building tools that rely on external services?",
+        "why_asked": "To evaluate practical debugging, error handling, and API integration skills.",
+        "answer_strategy": "Describe the architecture of the AI Git Commit Tool, explain how it sends staged diffs to the OpenRouter API, and discuss how you implemented or would implement error handling (like try-catch blocks or status code checks) to handle API failures gracefully.",
+        "from_your_background": "AI Git Commit Tool project (Python, OpenRouter API)."
+      },
+      {
+        "question": "How do you manage your time and prioritize tasks when faced with competing deadlines?",
+        "why_asked": "To assess reliability, time management, and soft skills under pressure.",
+        "answer_strategy": "Use the STAR method to describe balancing a full course load at Seneca Polytechnic/TMU with a consistent work schedule as a Deli Clerk, emphasizing scheduling, proactive communication, and maintaining high standards in both areas.",
+        "from_your_background": "Deli Clerk role at Adonis Supermarket and academic studies."
+      }
+    ],
+    "questions_to_ask_them": [],
+    "advice_succeeded": true
+  }
+}
