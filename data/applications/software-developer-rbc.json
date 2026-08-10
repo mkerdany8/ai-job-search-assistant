@@ -1,0 +1,287 @@
+{
+  "generated_on": "2026-08-10",
+  "source_file": "software-developer-rbc.pdf",
+  "posting": {
+    "job_title": "Software Developer",
+    "company_name": "RBC",
+    "location": "Toronto, ON",
+    "remote_status": "not listed",
+    "posting_age_days": 10,
+    "required_skills": [
+      "Python",
+      "Golang",
+      "Java",
+      "REST APIs",
+      "Git",
+      "AWS",
+      "Azure",
+      "Docker",
+      "Kubernetes",
+      "SQL Databases"
+    ],
+    "preferred_skills": [
+      "Active Learning",
+      "CI/CD",
+      "Containerization"
+    ],
+    "experience": {
+      "min_years": 0,
+      "seniority": "junior"
+    },
+    "education": null,
+    "salary": {
+      "min_amount": null,
+      "max_amount": null,
+      "currency": null,
+      "period": null
+    },
+    "responsibilities": [
+      "Contributing to the development, testing, and maintenance of AI services under the guidance of senior engineers",
+      "Building reliable APIs, backend services, and integration components that support AI and ML applications",
+      "Learning and applying software engineering best practices, coding standards, and secure development principles",
+      "Participating in code reviews, design discussions, and team ceremonies to improve technical understanding and delivery quality",
+      "Collaborating with infrastructure, platform, and ML teams to support reliable AI systems across cloud and on-premise environments",
+      "Writing unit tests, integration tests, and documentation to support maintainable and high-quality software",
+      "Troubleshooting defects, supporting production issues, and learning observability practices such as logging, monitoring, and alerting",
+      "Growing practical experience with modern engineering tools, cloud platforms, containerization, and AI service development"
+    ]
+  },
+  "company_research": {
+    "company_size": "97,000+ employees",
+    "industry": "Financial Services and Banking",
+    "recent_news": [
+      "Established a new centralized AI Group reporting directly to the CEO.",
+      "Actively developing and deploying proprietary AI models like ATOM across various banking products and services.",
+      "Ongoing investment in digital transformation and innovation across global operations."
+    ],
+    "culture_signals": [
+      "Strong emphasis on internal collaboration through an 'inner-source' development culture, utilizing platforms like Slack.",
+      "Described as having a supportive, respectful atmosphere with a focus on diversity and inclusion.",
+      "Engineers report a strong focus on agile work environments and continuous learning.",
+      "Software developers generally rate their compensation and benefits favorably."
+    ],
+    "notes_for_applicant": [
+      "Headquartered in Toronto, Ontario, with significant global operations.",
+      "RBC offers diverse tech roles including AI/Machine Learning, Cloud, Cybersecurity, and Data engineering.",
+      "The bank maintains an active AI research division (Borealis AI) and an innovation arm (RBCx) that operates with a startup-like culture.",
+      "Total compensation for software engineers varies significantly by level; market data suggests a median total compensation around $126,000 CAD.",
+      "The hiring process often emphasizes technical skills, security frameworks (like OWASP), and ability to work in regulated, large-scale systems."
+    ],
+    "research_succeeded": true
+  },
+  "legitimacy": {
+    "verdict": "green",
+    "headline": "This is a legitimate job posting from the Royal Bank of Canada (RBC) for their newly established AI Group.",
+    "signals": [
+      {
+        "signal": "Highly established company domain",
+        "evidence": "The domain rbc.com was registered on 1994-10-24 and is managed by GoDaddy Corporate Domains, LLC.",
+        "direction": "positive",
+        "weight": "strong"
+      },
+      {
+        "signal": "Verifiable physical office address",
+        "evidence": "The address listed in the posting, 'RBC WATERPARK PLACE, 88 QUEENS QUAY W:TORONTO', is a well-documented, major office complex and branch for RBC in Toronto.",
+        "direction": "positive",
+        "weight": "moderate"
+      },
+      {
+        "signal": "Consistent with real-world company initiatives",
+        "evidence": "The posting mentions RBC's 'AI Group', which matches recent public announcements and news regarding RBC establishing a centralized AI Group and actively hiring software and machine learning engineers.",
+        "direction": "positive",
+        "weight": "moderate"
+      },
+      {
+        "signal": "No suspicious posting-text signals",
+        "evidence": "The posting does not ask for upfront payments, banking details, or sensitive ID documents, and outlines standard corporate benefits and hiring practices.",
+        "direction": "positive",
+        "weight": "weak"
+      }
+    ],
+    "domains_checked": [
+      "rbc.com"
+    ],
+    "recommendation": "You can safely apply to this position. Ensure you submit your application through LinkedIn or directly via the official RBC careers portal (jobs.rbc.com).",
+    "assessment_succeeded": true
+  },
+  "fit": {
+    "overall_score": 53,
+    "band": "good",
+    "band_label": "Good match",
+    "band_message": "Apply. You match most of what they asked for.",
+    "dimensions": [
+      {
+        "dimension": "required_skills",
+        "score": 50,
+        "evidence": "The candidate matches 5 out of 10 required skills (Python, Java, REST APIs, Git, and Azure). Key missing requirements include Golang, AWS, Docker, Kubernetes, and SQL Databases.",
+        "matched": [
+          "Python",
+          "Java",
+          "REST APIs",
+          "Git",
+          "Azure"
+        ],
+        "missing": [
+          "Golang",
+          "AWS",
+          "Docker",
+          "Kubernetes",
+          "SQL Databases"
+        ]
+      },
+      {
+        "dimension": "preferred_skills",
+        "score": 0,
+        "evidence": "The candidate does not currently list any of the preferred skills (Active Learning, CI/CD, or Containerization) on their resume.",
+        "matched": [],
+        "missing": [
+          "Active Learning",
+          "CI/CD",
+          "Containerization"
+        ]
+      },
+      {
+        "dimension": "experience",
+        "score": 65,
+        "evidence": "The posting is for a junior role requiring 0 years of experience. While the candidate lacks professional software engineering experience, they demonstrate practical application through academic and personal projects, such as the AI Git Commit Tool and TMUber simulation.",
+        "matched": [
+          "Junior seniority",
+          "0 years minimum experience"
+        ],
+        "missing": [
+          "Professional software development experience",
+          "Experience in a regulated enterprise environment"
+        ]
+      },
+      {
+        "dimension": "market_alignment",
+        "score": 80,
+        "evidence": "The candidate's profile aligns strongly with the Toronto junior developer market, which heavily values Git, Java, Python, and cloud awareness. Their Azure AI certification and LLM-based project work fit the market trend toward AI service integration.",
+        "matched": [
+          "Git",
+          "Java",
+          "Python",
+          "REST APIs",
+          "Azure"
+        ],
+        "missing": [
+          "Docker",
+          "CI/CD"
+        ]
+      }
+    ],
+    "skill_overlap": {
+      "matched_required": [
+        "Python",
+        "Java",
+        "REST APIs",
+        "Git",
+        "Azure"
+      ],
+      "implied_required": [],
+      "missing_required": [
+        "Golang",
+        "AWS",
+        "Docker",
+        "Kubernetes",
+        "SQL Databases"
+      ],
+      "matched_preferred": [],
+      "implied_preferred": [],
+      "missing_preferred": [
+        "Active Learning",
+        "CI/CD",
+        "Containerization"
+      ],
+      "required_coverage_pct": 50,
+      "preferred_coverage_pct": 0
+    },
+    "summary": "Moustafa is a promising junior developer whose academic projects and Azure AI certification align well with RBC's focus on AI service development. While he meets the entry-level experience threshold, he will need to bridge gaps in containerization, cloud infrastructure, and CI/CD to fully meet the role's technical demands.",
+    "why_apply": [
+      "The role is junior-level with 0 years of experience required, making it an ideal entry point to transition into professional software development.",
+      "Your hands-on project building an AI Git Commit Tool directly aligns with the posting's focus on developing and integrating AI/ML services.",
+      "Your Microsoft Azure AI certification provides a strong foundation for RBC's cloud-based AI initiatives."
+    ],
+    "transferable_strengths": [
+      "Your experience as a Deli Clerk at Adonis Supermarket demonstrates strong time management, reliability, and teamwork in a fast-paced environment.",
+      "Your AI Git Commit Tool project demonstrates practical API integration and command-line tooling skills, which translate well to building backend services."
+    ],
+    "honest_stretches": [
+      "You lack experience with containerization tools like Docker and Kubernetes, which are required for deploying RBC's AI services.",
+      "The role requires Golang and AWS, which are currently missing from your technical toolkit.",
+      "You do not have experience with CI/CD pipelines, which are preferred for modern software delivery at RBC."
+    ],
+    "scoring_succeeded": true
+  },
+  "advice": {
+    "positioning_angle": "An agile, AI-certified junior developer who combines strong foundational backend skills in Java and Python with hands-on experience building LLM-integrated tools and a proven track record of high-reliability teamwork.",
+    "resume_summary_rewrite": "Detail-oriented and AI-certified Junior Software Developer with a strong foundation in Java, Python, and REST API integration. Proven ability to build functional AI-driven tools, such as an LLM-powered Git commit generator, and design structured object-oriented systems. Certified in Microsoft Azure AI, bringing a disciplined approach to software engineering, collaborative teamwork, and rapid technical adaptation within agile environments.",
+    "resume_edits": [
+      {
+        "section": "Hard Skills",
+        "current": "SQL",
+        "suggested": "SQL Databases",
+        "rationale": "Matches the exact required skill keyword in the RBC posting."
+      },
+      {
+        "section": "Projects - AI Git Commit Tool",
+        "current": "Built a command-line tool that generates Git commit messages by sending staged diffs to a language-model API.",
+        "suggested": "Built a command-line tool that generates Git commit messages by sending staged diffs to a language-model API; implemented error handling and logging to troubleshoot API integration issues.",
+        "rationale": "Demonstrates troubleshooting, logging, and API integration responsibilities highlighted in the posting."
+      },
+      {
+        "section": "Work Experience - Adonis Supermarket",
+        "current": "Work within a fast-paced team to deliver strong customer service while maintaining food-safety standards.",
+        "suggested": "Collaborate within a fast-paced, high-volume team environment to maintain strict operational standards, demonstrating the reliability and active communication required for agile team ceremonies.",
+        "rationale": "Translates non-technical experience into transferable agile team skills valued by RBC."
+      }
+    ],
+    "keywords_to_add": [
+      "SQL Databases",
+      "API integration",
+      "debugging",
+      "systems design"
+    ],
+    "cover_letter_opening": "As an AI-certified developer who has built practical LLM-integrated command-line tools, I am incredibly excited to apply for the Software Developer position at RBC, where I can contribute to your centralized AI initiatives and the deployment of proprietary models like ATOM.",
+    "cover_letter_points": [
+      "Argue that my academic and personal project background directly prepares me to build reliable backend services for AI/ML applications, using my AI Git Commit Tool project (which integrates Python with an LLM API) and my TMUber Ride-Sharing simulation in Java as evidence of strong object-oriented design and API integration capabilities.",
+      "Demonstrate my commitment to continuous learning and cloud technologies by highlighting my Microsoft Azure AI certification and my current self-study path into containerization and SQL database design, aligning with RBC's modern cloud-native stack.",
+      "Highlight how my experience in a high-pressure, collaborative environment translates to strong team performance, using my role as a Deli Clerk at Adonis Supermarket to show how I balanced a full course load while maintaining high reliability, time management, and active communication in a fast-paced team."
+    ],
+    "cover_letter_closing": "I welcome the opportunity to discuss how my foundational backend skills, AI certification, and dedication to continuous learning can support RBC's engineering and AI teams.",
+    "company_hooks": [
+      "RBC's establishment of a centralized AI Group reporting directly to the CEO and the development of proprietary AI models like ATOM.",
+      "RBC's active AI research division, Borealis AI, and the startup-like innovation culture fostered within RBCx."
+    ],
+    "address_the_gaps": [
+      "Acknowledge that while I have not deployed containerized applications in a production environment, I am highly proficient in Linux and Bash, and am currently completing self-paced training in Docker to understand containerization fundamentals.",
+      "State honestly that my primary backend languages are Java and Python, but emphasize my Microsoft Azure AI certification as evidence of my ability to quickly grasp cloud concepts, making me ready to adapt to AWS and learn Golang on the job.",
+      "Point to my academic coursework and foundational SQL knowledge, explaining that while I have not managed enterprise-scale databases, I understand relational database design and am eager to apply this under the guidance of senior RBC engineers."
+    ],
+    "interview_questions": [
+      {
+        "question": "How have you integrated AI or machine learning APIs into a software project?",
+        "why_asked": "Testing practical API integration and understanding of LLM workflows.",
+        "answer_strategy": "Explain the architecture of the tool, how staged diffs are captured via Git, formatted, sent to the OpenRouter API, and how the response is parsed and returned.",
+        "from_your_background": "AI Git Commit Tool project"
+      },
+      {
+        "question": "The role requires working with Docker and Kubernetes. Since you don't have professional experience with these, how would you approach learning them for this role?",
+        "why_asked": "Testing active learning, adaptability, and self-motivation.",
+        "answer_strategy": "Frame Linux and Bash proficiency as the foundation, detail current self-study steps (such as learning Docker container basics), and express enthusiasm for learning RBC's specific deployment pipelines.",
+        "from_your_background": "Linux and Bash skills, combined with Seneca Polytechnic coursework"
+      },
+      {
+        "question": "Can you describe a time you had to manage competing priorities under pressure?",
+        "why_asked": "Testing time management, reliability, and soft skills in a fast-paced environment.",
+        "answer_strategy": "Use the STAR method to describe balancing a full-time academic schedule with a consistent shift schedule at Adonis Supermarket, highlighting organization and communication.",
+        "from_your_background": "Deli Clerk role at Adonis Supermarket"
+      }
+    ],
+    "questions_to_ask_them": [
+      "How does the centralized AI Group collaborate with junior developers to integrate proprietary models like ATOM into everyday banking services?",
+      "Given RBC's strong 'inner-source' development culture, what opportunities exist for junior engineers to contribute to or learn from projects outside their immediate team?"
+    ],
+    "advice_succeeded": true
+  }
+}

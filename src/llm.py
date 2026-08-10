@@ -20,3 +20,8 @@ def get_client() -> OpenAI:
             "OPENROUTER_API_KEY is not set. Copy .env.example to .env and add your key."
         )
     return OpenAI(base_url="https://openrouter.ai/api/v1", api_key=key)
+
+# Extraction is schema-filling and works fine on a cheap fast model.
+# Legitimacy verdicts and fit scoring are judgement calls that weigh
+# conflicting evidence, so those use a stronger model.
+REASONING_MODEL = "google/gemini-3.5-flash"
