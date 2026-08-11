@@ -8,12 +8,24 @@
     "remote_status": "on-site",
     "posting_age_days": 0,
     "required_skills": [
+      "coding",
+      "debugging",
+      "unit testing",
+      "source control",
+      "software delivery",
       "Python",
       "APIs",
+      "data structures",
       "relational data stores",
       "NoSQL data stores",
       "cloud platforms",
-      "CI/CD pipelines"
+      "application deployment",
+      "containerized environments",
+      "CI/CD pipelines",
+      "infrastructure",
+      "observability",
+      "secure coding",
+      "identity/access concepts"
     ],
     "preferred_skills": [
       "TypeScript",
@@ -21,12 +33,17 @@
       "Azure",
       "AWS",
       "containerized development environments",
-      "cloud deployment practices",
+      "cloud deployment",
       "CI/CD",
       "automated testing",
       "infrastructure-as-code",
+      "data management",
+      "data governance",
+      "metadata platforms",
+      "catalog platforms",
       "pandas",
-      "coding copilots"
+      "coding copilots",
+      "AI-assisted developer workflows"
     ],
     "experience": {
       "min_years": 2,
@@ -42,62 +59,50 @@
     "responsibilities": [
       "Develop and maintain technical solutions for EDMO Data Catalog services",
       "Build and support defined components within cloud-enabled solutions",
-      "Analyse requirements",
-      "Build quality code",
-      "Perform unit and component testing",
-      "Support peer reviews",
-      "Participate in production support"
+      "Analyze requirements, build quality code, perform unit and component testing, and support peer reviews",
+      "Participate in production support",
+      "Apply enterprise standards for security, reliability, scalability and maintainability",
+      "Use approved AI-assisted engineering tools"
     ]
   },
   "company_research": {
-    "company_size": "Large global financial institution with over 90,000 employees globally.",
-    "industry": "Banking and Financial Services",
+    "company_size": "Approximately 90,000 employees globally.",
+    "industry": "Financial Services and Banking.",
     "recent_news": [
-      "Implemented a major restructuring program starting in 2025 to streamline operations and reduce expenses.",
-      "Reported significant layoffs across multiple divisions including direct investing, risk management, and corporate functions.",
-      "Announced in February 2026 the elimination of over 3,000 positions despite reporting strong earnings.",
-      "Facing challenges related to anti-money laundering (AML) regulatory settlements in the U.S. which have influenced cost-cutting efforts.",
-      "Implemented a four-day in-office return-to-work mandate starting in late 2025/early 2026."
+      "In 2025, TD Bank announced a restructuring plan to reduce its workforce by approximately 2% (roughly 2,000 employees) to cut costs and focus on digital and AI investments.",
+      "The restructuring follows a historic anti-money laundering settlement in the U.S., which also limits the bank's retail operations expansion in that region."
     ],
     "culture_signals": [
-      "Generally positive feedback from engineering staff, with many reviews citing a supportive atmosphere, team collaboration, and good work-life balance.",
-      "Glassdoor ratings for software engineering roles are consistently above 4 out of 5 stars.",
-      "Some employees report a high volume of work and pressure associated with corporate restructuring.",
-      "Management is often described as encouraging skill development."
+      "Generally positive feedback from software staff regarding the work environment, with Glassdoor ratings averaging around 4.1-4.2 out of 5 stars.",
+      "Employees describe the environment as project-oriented and note the availability of support from management.",
+      "Some recent reports suggest a 'tense' atmosphere due to corporate restructuring, with complaints about excessive meetings and bureaucracy."
     ],
     "notes_for_applicant": [
-      "Be aware that the current environment is one of significant organizational change and potential job instability due to ongoing restructuring.",
-      "The mandatory four-day in-office policy is a major shift in their working model and may impact work flexibility.",
-      "The bank is explicitly prioritizing investment in digital transformation, AI, and data-driven solutions, which may provide growth opportunities within the engineering team.",
-      "Research the specific team or division you are applying to, as impacts of restructuring vary by department."
+      "Total compensation for software engineers in Canada typically ranges from CA$84K to over CA$206K, with a median around CA$110K.",
+      "The company is actively shifting its focus toward AI and automation, which may influence the types of projects available to new hires.",
+      "Given the recent organizational restructuring, applicants may want to inquire about team stability and the specific focus of the department they are joining."
     ],
     "research_succeeded": true
   },
   "legitimacy": {
     "verdict": "green",
-    "headline": "This is a legitimate job posting from TD Bank, a highly established Canadian financial institution.",
+    "headline": "This is a legitimate job posting from TD Bank, supported by an established domain and consistent job details.",
     "signals": [
       {
-        "signal": "Highly established corporate domain",
-        "evidence": "td.com was registered on 1998-04-15 and is set to expire on 2028-04-14.",
+        "signal": "Highly established company domain",
+        "evidence": "td.com was registered on 1998-04-15 and expires on 2028-04-14, which is consistent with a major, long-standing financial institution.",
         "direction": "positive",
         "weight": "strong"
       },
       {
-        "signal": "Independently verifiable job details",
-        "evidence": "A search for the specific team 'EDMO Data Catalog services' and role matches active, official TD job listings on LinkedIn and other reputable job boards.",
-        "direction": "positive",
-        "weight": "strong"
-      },
-      {
-        "signal": "Realistic compensation and requirements",
-        "evidence": "The salary range of $69,700 - $98,400 CAD is highly realistic and standard for an entry-level/junior Software Engineer I role in Toronto.",
+        "signal": "Verifiable job details and team context",
+        "evidence": "The posting references the Enterprise Data Management Office (EDMO) Data Catalog services, which matches other active TD job listings (such as Software Engineer II and Lead Full-Stack Engineer roles) in Toronto.",
         "direction": "positive",
         "weight": "moderate"
       },
       {
-        "signal": "No warning signs in posting text",
-        "evidence": "The posting contains no requests for upfront fees, banking details, or sensitive personal identification documents.",
+        "signal": "Realistic compensation range",
+        "evidence": "The listed salary of $69,700 - $98,400 CAD is highly realistic for an entry-level (Software Engineer I) role at TD in Toronto, aligning with market data showing entry-level base salaries around CA$82K-84K.",
         "direction": "positive",
         "weight": "moderate"
       }
@@ -105,34 +110,41 @@
     "domains_checked": [
       "td.com"
     ],
-    "recommendation": "Apply normally through the official TD careers portal or the verified LinkedIn application link.",
+    "recommendation": "Apply normally through TD's official careers portal or the verified LinkedIn application link.",
     "assessment_succeeded": true
   },
   "fit": {
-    "overall_score": 38,
+    "overall_score": 37,
     "band": "stretch",
     "band_label": "Stretch worth applying for",
     "band_message": "Apply. Postings list wants, not hard gates, and the gaps here are the kind that get closed on the job.",
+    "advisory": "apply",
     "dimensions": [
       {
         "dimension": "required_skills",
-        "score": 35,
-        "evidence": "The candidate matches 2 out of 6 required skills (Python and APIs) based on the computed overlap. He has Python experience from his AI Git Commit Tool project and API experience from integrating the OpenRouter API. However, he lacks explicit experience with relational data stores, NoSQL data stores, cloud platforms, and CI/CD pipelines as stated in the posting.",
+        "score": 30,
+        "evidence": "You possess core foundational skills like Python, APIs, and data structures, which are essential for the role. However, you are missing critical enterprise requirements such as relational/NoSQL databases, cloud platforms, containerized environments, and CI/CD pipelines. While you have Git on your resume, it did not register as an exact match for the 'source control' requirement.",
         "matched": [
           "Python",
-          "APIs"
+          "APIs",
+          "data structures"
         ],
         "missing": [
+          "source control",
           "relational data stores",
           "NoSQL data stores",
           "cloud platforms",
-          "CI/CD pipelines"
+          "application deployment",
+          "containerized environments",
+          "CI/CD pipelines",
+          "observability",
+          "identity/access concepts"
         ]
       },
       {
         "dimension": "preferred_skills",
-        "score": 15,
-        "evidence": "The candidate matches 1 out of 11 preferred skills (Azure), supported by his Artificial Intelligence on Microsoft Azure certification. He is missing other preferred technologies like TypeScript, Node.js, AWS, containerized development environments, cloud deployment practices, CI/CD, infrastructure-as-code, and pandas.",
+        "score": 10,
+        "evidence": "You match the preferred requirement for Azure through your Coursera certification. However, you lack exposure to other preferred technologies like AWS, TypeScript, Node.js, pandas, and infrastructure-as-code tools.",
         "matched": [
           "Azure"
         ],
@@ -141,16 +153,21 @@
           "Node.js",
           "AWS",
           "containerized development environments",
-          "cloud deployment practices",
+          "cloud deployment",
           "CI/CD",
           "infrastructure-as-code",
-          "pandas"
+          "data management",
+          "data governance",
+          "metadata platforms",
+          "catalog platforms",
+          "pandas",
+          "AI-assisted developer workflows"
         ]
       },
       {
         "dimension": "experience",
         "score": 20,
-        "evidence": "The posting asks for a minimum of 2 years of experience for this junior role. The candidate's professional experience is currently limited to a non-technical role (Deli Clerk). However, he has built three relevant software projects (AI Git Commit Tool, TMUber, and Media Library System) during his studies.",
+        "evidence": "The posting requires 2 years of experience for this junior role. Your experience is currently limited to academic and personal projects, alongside a non-technical role as a Deli Clerk. While your projects show practical application of programming, you lack professional software engineering experience.",
         "matched": [],
         "missing": [
           "2 years of professional software engineering experience"
@@ -158,43 +175,49 @@
       },
       {
         "dimension": "education",
-        "score": 70,
-        "evidence": "The posting accepts an Undergraduate degree, Postgraduate degree, or Technical Certificate. The candidate is currently pursuing a Computer Programming Diploma at Seneca Polytechnic (expected 2026) and has completed the first year of a B.Sc. in Computer Science at TMU. He also holds a technical certification in Azure AI.",
+        "score": 85,
+        "evidence": "The posting accepts an Undergraduate degree, Postgraduate degree, or Technical Certificate. Your ongoing Computer Programming Diploma from Seneca Polytechnic and completed first year of a B.Sc. in Computer Science align well with these flexible criteria.",
         "matched": [
-          "Technical Certificate (Azure AI Certification)",
-          "In-progress Computer Programming Diploma"
+          "Computer Programming Diploma (in progress)",
+          "B.Sc. Computer Science (1 year completed)"
         ],
         "missing": [
-          "Completed Undergraduate degree"
+          "Completed undergraduate degree"
         ]
       },
       {
         "dimension": "market_alignment",
         "score": 65,
-        "evidence": "The candidate's profile aligns well with the broader junior developer market, which highly values Git, Java, Python, and REST APIs. However, he lacks cloud-native deployment skills (Docker, CI/CD) which are increasingly critical for junior roles in the financial sector.",
+        "evidence": "Your profile aligns well with market demands for Python, Java, and Git. However, you lack the containerization (Docker/Kubernetes) and hands-on cloud deployment experience that are increasingly standard for junior roles in the financial and tech sectors.",
         "matched": [
           "Git",
           "Java",
           "Python",
-          "REST APIs"
+          "Azure certification"
         ],
         "missing": [
-          "Docker/Containerization",
-          "CI/CD Pipelines"
+          "Docker/Kubernetes",
+          "Hands-on cloud deployment experience"
         ]
       }
     ],
     "skill_overlap": {
       "matched_required": [
         "Python",
-        "APIs"
+        "APIs",
+        "data structures"
       ],
       "implied_required": [],
       "missing_required": [
+        "source control",
         "relational data stores",
         "NoSQL data stores",
         "cloud platforms",
-        "CI/CD pipelines"
+        "application deployment",
+        "containerized environments",
+        "CI/CD pipelines",
+        "observability",
+        "identity/access concepts"
       ],
       "matched_preferred": [
         "Azure"
@@ -205,106 +228,123 @@
         "Node.js",
         "AWS",
         "containerized development environments",
-        "cloud deployment practices",
+        "cloud deployment",
         "CI/CD",
         "infrastructure-as-code",
-        "pandas"
+        "data management",
+        "data governance",
+        "metadata platforms",
+        "catalog platforms",
+        "pandas",
+        "AI-assisted developer workflows"
       ],
-      "required_coverage_pct": 33,
-      "preferred_coverage_pct": 11,
-      "filtered_generic_required": [],
+      "required_coverage_pct": 25,
+      "preferred_coverage_pct": 7,
+      "filtered_generic_required": [
+        "coding",
+        "debugging",
+        "unit testing",
+        "software delivery",
+        "infrastructure",
+        "secure coding"
+      ],
       "filtered_generic_preferred": [
         "automated testing",
         "coding copilots"
       ]
     },
-    "summary": "Moustafa is an aspiring software engineer with a solid foundation in Python, Java, and APIs, complemented by an Azure AI certification. While he is still completing his formal education and lacks the requested 2 years of professional experience, his academic projects demonstrate practical coding and system design capabilities.",
+    "summary": "Moustafa is an emerging developer with a solid foundation in Python, Java, and APIs, but currently lacks the professional experience and cloud/containerization skills required for this role. While his academic projects and Azure certification show promise, he faces a steep climb to meet the 2-year experience threshold and modern DevOps requirements.",
     "why_apply": [
-      "The role is an entry-level (Software Engineer I) position, making it a great target for an ambitious student or recent certificate holder.",
-      "Your Python and API integration skills directly match the core requirements of the EDMO Data Catalog services team.",
-      "TD is a major employer in Toronto, and getting on their radar early in your career can open up future internship or graduate opportunities."
+      "TD is a major employer in Toronto with a structured environment that can support junior talent.",
+      "Your Python and API integration skills directly align with the core development needs of the EDMO Data Catalog services.",
+      "Your Azure certification provides a solid theoretical foundation for TD's cloud-enabled solutions."
     ],
     "transferable_strengths": [
-      "Your SQL skill directly translates to the 'relational data stores' requirement, even though the exact phrase wasn't matched.",
-      "Your experience as a Deli Clerk demonstrates strong soft skills like time management, reliability, and working in fast-paced team environments.",
-      "Your UML modeling experience using Visual Paradigm is a valuable asset for system design and documentation tasks."
+      "Your 'AI Git Commit Tool' project demonstrates practical experience with Git, which directly addresses the 'source control' requirement despite the exact-match gap.",
+      "Your customer service experience as a Deli Clerk demonstrates strong communication, reliability, and time management, which are highly valuable in collaborative enterprise environments."
     ],
     "honest_stretches": [
-      "You currently lack professional software engineering experience, whereas the posting asks for 2 years.",
-      "You do not have hands-on experience with cloud platforms (AWS/Azure deployment) or CI/CD pipelines, which are key to TD's cloud-enabled solutions.",
-      "You lack exposure to NoSQL data stores and containerized development environments (like Docker)."
+      "You lack the 2 years of professional software engineering experience requested by the posting.",
+      "You need hands-on experience with containerization (Docker) and CI/CD pipelines, which are key requirements for TD's cloud-enabled solutions.",
+      "You lack practical experience with relational and NoSQL databases on your resume, despite having SQL listed as a skill."
     ],
     "scoring_succeeded": true
   },
   "advice": {
-    "positioning_angle": "An adaptable, Azure-certified developer who combines strong foundational Python and API integration skills with formal database design knowledge and a proven track record of reliability in high-pressure environments.",
-    "resume_summary_rewrite": "Detail-oriented and Azure-certified developer with a strong foundation in Python, REST APIs, and relational database design. Proven ability to build functional, API-driven tools and manage complex object-oriented systems. Combines technical training in systems design and UML modeling with a strong work ethic, exceptional time management, and collaborative skills developed in fast-paced, customer-facing environments. Eager to contribute to TD's EDMO Data Catalog services.",
+    "positioning_angle": "A foundational software developer combining academic computer science training with practical experience building AI-integrated tools, certified in Azure, and possessing the high-reliability, customer-first operational discipline of a fast-paced retail environment.",
+    "resume_summary_rewrite": "Detail-oriented Software Developer and Computer Science student with a strong foundation in Python, Java, and API integration, complemented by a Microsoft Azure AI certification. Proven ability to build functional, object-oriented applications and AI-assisted developer tools. Combines technical aptitude with exceptional time management, reliability, and collaborative communication skills developed in high-volume customer service environments. Eager to contribute to TD's EDMO Data Catalog services by delivering clean, secure, and maintainable code.",
     "resume_edits": [
       {
         "section": "Hard Skills",
+        "current": "Git",
+        "suggested": "Git (Source Control)",
+        "rationale": "Directly maps the candidate's version control skills to the 'source control' required skill in the posting."
+      },
+      {
+        "section": "Hard Skills",
         "current": "SQL",
-        "suggested": "Relational Data Stores (SQL)",
-        "rationale": "Directly addresses the 'relational data stores' required skill using the candidate's existing SQL knowledge."
+        "suggested": "SQL (Relational Data Stores)",
+        "rationale": "Directly aligns the candidate's database skills with the 'relational data stores' requirement."
       },
       {
         "section": "Projects - AI Git Commit Tool",
         "current": "Built a command-line tool that generates Git commit messages by sending staged diffs to a language-model API.",
-        "suggested": "Developed a Python-based command-line tool that integrates with a language-model REST API to analyze staged Git diffs and automate commit message generation.",
-        "rationale": "Emphasizes Python and REST API integration, which are core required skills for the EDMO Data Catalog services."
+        "suggested": "Built a command-line tool that automates Git commit message generation by parsing staged diffs and integrating with a language-model API, demonstrating secure API integration and AI-assisted developer workflows.",
+        "rationale": "Highlights 'AI-assisted developer workflows' and 'secure coding/API integration' which are preferred and required skills."
       },
       {
-        "section": "Work Experience - Adonis Supermarket",
-        "current": "Work within a fast-paced team to deliver strong customer service while maintaining food-safety standards.",
-        "suggested": "Collaborate within a fast-paced team to deliver high-quality service under pressure, maintaining strict operational standards and supporting peer workflows.",
-        "rationale": "Aligns with TD's collaborative culture and the posting's requirement for supporting peer reviews and participating in production support."
+        "section": "Projects - Media Library System",
+        "current": "Built a media catalog where Books, Movies, and TV Shows inherit from a shared MediaItem base class.",
+        "suggested": "Designed and implemented a structured media catalog system utilizing object-oriented inheritance (Books, Movies, TV Shows inheriting from a MediaItem base class) and data structures to manage metadata, aligning with catalog platform concepts.",
+        "rationale": "Connects the project directly to the 'catalog platforms' and 'data structures' requirements of the EDMO Data Catalog team."
       }
     ],
     "keywords_to_add": [
-      "Relational data stores",
-      "API integration",
-      "Database design",
-      "System design"
+      "source control",
+      "relational data stores",
+      "catalog platforms",
+      "AI-assisted developer workflows",
+      "data structures"
     ],
-    "cover_letter_opening": "As an Azure-certified developer with hands-on experience building Python-based API integrations and a strong foundation in relational database design, I am excited to apply for the Software Engineer I position to support TD's EDMO Data Catalog services.",
+    "cover_letter_opening": "As a software developer certified in Microsoft Azure AI who has built custom command-line tools to optimize developer workflows, I am incredibly excited to apply for the Software Engineer I position supporting TD's EDMO Data Catalog services.",
     "cover_letter_points": [
-      "Demonstrate core technical alignment by highlighting the AI Git Commit Tool, showing how Python and REST API integration were used to build a practical, automated developer tool.",
-      "Bridge the database gap by connecting academic SQL and database design coursework to TD's 'relational data stores' requirement, showcasing readiness to manage data catalog services.",
-      "Leverage professional reliability and teamwork from the Adonis Supermarket role, proving the ability to manage a rigorous schedule, collaborate under pressure, and adapt to TD's collaborative, in-office environment."
+      "In my AI Git Commit Tool project, I designed a Python-based command-line utility that integrates with a language-model API to automate commit messages, demonstrating my practical grasp of API integration, source control, and AI-assisted developer workflows.",
+      "My academic work, including designing a Media Library System in C++ and a console-based ride-sharing application in Java, has solidified my understanding of data structures, object-oriented design, and cataloging concepts, which directly align with the development needs of TD's Data Catalog services.",
+      "While balancing a rigorous computer science curriculum, my experience as a Deli Clerk at Adonis Supermarket has honed my professional communication, reliability, and ability to collaborate within fast-paced, high-volume environments—soft skills that will translate into dependable production support and team collaboration at TD."
     ],
-    "cover_letter_closing": "I welcome the opportunity to discuss how my technical foundation in Python, database design, and Azure, combined with my proven reliability, can add value to the EDMO Data Catalog team at TD.",
+    "cover_letter_closing": "I welcome the opportunity to discuss how my technical foundation in Python, my Azure certification, and my dedication to operational excellence can support TD's digital and AI-driven initiatives.",
     "company_hooks": [
-      "TD's strategic focus on digital transformation and data-driven solutions, particularly through initiatives like the EDMO Data Catalog services.",
-      "TD's collaborative engineering culture and commitment to encouraging skill development, which aligns with my continuous learning path."
+      "TD's strategic focus on digital and AI investments, particularly following its recent restructuring to prioritize these areas, aligns perfectly with my hands-on experience building AI-assisted developer tools and my Azure AI certification.",
+      "The opportunity to contribute to the EDMO Data Catalog services matches my interest in data management and structured metadata systems, which I have explored academically through catalog-style projects."
     ],
     "address_the_gaps": [
-      "For the 2-year experience gap: Highlight the intensity of balancing a full-time Computer Programming diploma at Seneca with consistent employment at Adonis Supermarket, demonstrating professional maturity, time management, and rapid learning.",
-      "For NoSQL and Cloud Deployment gaps: Acknowledge the lack of enterprise production experience, but point to the Microsoft Azure AI certification as evidence of cloud literacy, and express immediate readiness to learn TD's specific deployment pipelines.",
-      "For CI/CD pipelines: Frame it as an active learning goal, referencing familiarity with Git version control as the foundational starting point for automated integration workflows."
+      "Acknowledge the lack of 2 years of professional software engineering experience by highlighting the intensity of balancing a full-time computer science curriculum with part-time work, demonstrating strong time management and rapid self-directed learning.",
+      "Address the gap in containerized environments (Docker) and CI/CD pipelines by pointing to your Azure AI certification as a foundation, and express your immediate plan to containerize your AI Git Commit Tool using Docker to bridge this gap.",
+      "Address the lack of professional database administration experience by showcasing your academic knowledge of SQL and relational database design, emphasizing your readiness to apply these concepts to TD's relational data stores."
     ],
     "interview_questions": [
       {
-        "question": "The posting requires experience with relational and NoSQL data stores. Can you describe your experience working with databases?",
-        "why_asked": "Testing database knowledge and honesty about the NoSQL gap.",
-        "answer_strategy": "Confirm strong foundational knowledge of relational databases (SQL) from coursework and database design, explain the structure of a relational schema, and honestly state that NoSQL is a current area of study that you are eager to apply.",
-        "from_your_background": "SQL skill and database design domain keyword."
+        "question": "The Software Engineer I role requires experience with containerized environments and CI/CD pipelines, which aren't explicitly detailed on your resume. How would you approach deploying an application in a containerized environment?",
+        "why_asked": "Testing the candidate's theoretical understanding of DevOps concepts and their ability to learn and adapt to modern deployment workflows despite a gap in professional experience.",
+        "answer_strategy": "Acknowledge the gap, reference the theoretical foundation from the Azure certification, and explain the steps to containerize a project (like the AI Git Commit Tool) using a Dockerfile, then outline how that container would fit into a basic CI/CD pipeline.",
+        "from_your_background": "AI Git Commit Tool project and Artificial Intelligence on Microsoft Azure certification."
       },
       {
-        "question": "This role supports our EDMO Data Catalog services. How have you handled data organization or cataloging in your past projects?",
-        "why_asked": "Testing ability to design structured data systems.",
-        "answer_strategy": "Discuss object-oriented design and inheritance to show how you structure complex data models logically.",
-        "from_your_background": "Media Library System project (C++), where Books, Movies, and TV Shows inherited from a shared MediaItem base class."
+        "question": "Can you walk us through how you designed the data structures for your Media Library System, and how that relates to managing metadata?",
+        "why_asked": "Testing core computer science fundamentals (data structures, object-oriented design) and their relevance to TD's EDMO Data Catalog services.",
+        "answer_strategy": "Explain the inheritance model (MediaItem base class), how data structures were used to store and query the catalog, and how this maps to metadata management concepts.",
+        "from_your_background": "Media Library System project."
       },
       {
-        "question": "We operate in a fast-paced environment with a four-day in-office schedule. How do you manage your time and ensure reliability under pressure?",
-        "why_asked": "Testing soft skills, adaptability to the return-to-office mandate, and work ethic.",
-        "answer_strategy": "Explain how you successfully balanced a rigorous academic load at Seneca and TMU while maintaining a consistent work schedule, emphasizing time management and reliability.",
+        "question": "This role involves participating in production support and collaborating across teams. How has your non-technical experience prepared you for the high-pressure environment of production support?",
+        "why_asked": "Evaluating soft skills, reliability, and the ability to handle high-pressure situations in a collaborative environment.",
+        "answer_strategy": "Connect the fast-paced, high-volume customer service environment of the supermarket to the demands of production support, emphasizing time management, calm under pressure, and clear communication.",
         "from_your_background": "Deli Clerk role at Adonis Supermarket."
       }
     ],
     "questions_to_ask_them": [
-      "How does the EDMO Data Catalog services team collaborate with other divisions at TD to support the bank's broader digital transformation and AI initiatives?",
-      "Given TD's focus on cloud-enabled solutions, what specific Azure services or deployment pipelines does the team currently use to maintain the Data Catalog?",
-      "With the transition to a four-day in-office schedule, how does the team structure its collaborative sessions, such as peer reviews and production support planning, on in-office days?"
+      "With TD's recent strategic restructuring focusing heavily on digital and AI investments, how is the EDMO Data Catalog team leveraging AI-assisted engineering tools to accelerate metadata management?",
+      "As a Software Engineer I on the EDMO team, what does the typical production support rotation look like, and what training or onboarding is provided to help junior engineers navigate TD's enterprise security and reliability standards?"
     ],
     "advice_succeeded": true
   }
