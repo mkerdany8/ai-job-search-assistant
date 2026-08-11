@@ -105,8 +105,14 @@ def analyze_gaps(resume: Resume, market: dict) -> GapAnalysis:
 
     for step in range(1, MAX_STEPS + 1):
         log.debug("Gap analysis step %d/%d", step, MAX_STEPS)
+        # The model skips research when it feels confident, which produces
+        # invented costs and durations. Force a tool call on the first step,
+        # then let it decide whether it needs more.
         completion = client.chat.completions.create(
-            model=EXTRACTION_MODEL, messages=messages, tools=[WEB_SEARCH_TOOL]
+            model=EXTRACTION_MODEL,
+            messages=messages,
+            tools=[WEB_SEARCH_TOOL],
+            tool_choice="required" if step == 1 else "auto",
         )
         msg = completion.choices[0].message
         if not msg.tool_calls:
