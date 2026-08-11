@@ -15,6 +15,7 @@ Four runs on the identical PDF.
 | 2 | 7 | 29% | 39% | Stretch worth applying for |
 | 3 | not logged | not logged | 40% | Stretch worth applying for |
 | 4 | 6 | 33% | 38% | Stretch worth applying for |
+| 5 | 6 | 37% | Stretch worth applying for |
 
 Run 4 is the one saved in `data/applications/`. Its dimension scores:
 
